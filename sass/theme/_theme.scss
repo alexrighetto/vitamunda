@@ -1,0 +1,154 @@
+// This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
+
+*:focus {
+outline: none;
+}
+
+h1{
+	color: darken($title-color, 10%);
+}
+h2{
+	color: darken($title-color, 5%);
+}
+
+h3{
+	color:$title-color;
+}
+
+h4{
+	color: lighten($title-color, 5%);
+}
+
+h5{
+	color: lighten($title-color, 10%);
+}
+
+a, a:link, a:visited{
+	color:$light-blue;
+}
+a:hover{
+	color:darken( $light-gray, 5% );
+}
+
+
+.site-main{
+	padding-top: 25px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+li {
+  padding-left: 1.3em;
+}
+
+
+ul li:before {
+  content: "\f00c"; /* FontAwesome Unicode */
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-left: -1.3em; /* same as padding-left set on li */
+  width: 1.3em; /* same as padding-left set on li */
+color: $gray-400;
+}
+
+
+
+.a {
+  li:before & {
+	  display:inline;
+	}
+}
+
+img{
+	li:before & {
+	  content:none;
+		width:auto;
+		margin-left:auto;
+	}
+}
+
+a[target="_blank"]:after {
+    font-family: 'FontAwesome';
+    content: " \f08e";	
+	font-size: .1em;
+	vertical-align: super;
+}
+
+.yith-wcmap li:before, .nav li:before, .navbar li:before, .woof li:before, .wc-block-grid__products li:before, .yotpo li:before, ul.products > li:before, .menu li:before, .yith-wfbt-items li:before, .xoo-wsc-notification-bar li:before{
+	content: none; /* FontAwesome Unicode */ 
+	display: auto;
+	margin-left: auto; /* same as padding-left set on li */
+	width: auto; /* same as padding-left set on li */
+	color: auto;
+}
+
+
+body{
+position: relative !important;
+overflow-y: scroll  
+	
+	
+}
+
+
+
+
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item.mega-current-menu-item > a.mega-menu-link, #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item.mega-current-menu-ancestor > a.mega-menu-link, #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item.mega-current-page-ancestor > a.mega-menu-link {
+
+	border-bottom: 3px #00a2ff solid;
+}
+
+
+
+.woocommerce-account  {
+	
+	.entry-content{
+		background:white;
+		padding:1em;
+	}
+
+	.wrapper{
+		background:$light-gray;
+	}
+
+	 .woocommerce-MyAccount-navigation{
+
+		
+
+	}
+	.list-group{
+		background-color: darken( $light-gray, 5% );
+		border-radius:0;
+		
+		a.list-group-item{
+			color: darken($light-gray, 60%);
+			font-size: 0.75em;
+			font-weight: bold;
+		}
+	}
+
+}
+
+
+
+
+a:link.post-edit-link{
+	color:darken($light-gray, 70%);
+	font-size:$small-font-size;
+	@extend .badge;
+	@extend .badge-light;
+}
+
+
+.edit-link{
+	
+	
+}
+
+.encyclopedia-prefix-filters{
+	.level-2{
+		
+	}
+}

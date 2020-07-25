@@ -1,0 +1,147 @@
+/* Scss Document */
+
+/*
+ * Globals
+ */
+
+/* Links */
+
+.error404 a,
+.error404 a:focus,
+.error404 a:hover {
+  color: #fff;
+}
+
+/* Custom default button */
+.error404 .btn-secondary,
+.error404 .btn-secondary:hover,
+.error404 .btn-secondary:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritance from `body` */
+  background-color: #fff;
+  border: .05rem solid #fff;
+}
+
+
+/*
+ * Base structure
+ */
+
+html.error404{
+	
+	background-color: #333;
+	height: 100%;
+	
+}
+
+
+body.error404 {
+  height: 100%;
+  background-color: #333;
+}
+
+
+
+body.error404 {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-pack: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  color: #fff;
+  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+}
+
+.error404 h1, .error404 .cover-heading{
+	color:$light-blue!important;
+}
+
+.error404 h2.number404 {
+	color: white !important;
+	font-size:14rem;
+}
+
+.error404 .infobox{
+	border-left:5px solid $light-blue ;
+	padding-left:30px;
+		
+}
+.error404 .navlinks {
+	margin-left:40px;
+}
+.error404 .navlinks .nav-link:before {
+  content: "\f00c"; /* FontAwesome Unicode */
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-left: -17px; /* same as padding-left set on li */
+  width: 1.3em; /* same as padding-left set on li */
+color: $light-blue;
+}
+.error404 .cover-container {
+  max-width: 28em;
+}
+
+
+/*
+ * Header
+ */
+.error404 .masthead {
+  margin-bottom: 2rem;
+}
+
+.error404 .masthead-brand {
+  margin-bottom: 0;
+}
+
+.error404 .nav-masthead .nav-link {
+  padding: .25rem 0;
+  font-weight: 700;
+  color: rgba(255, 255, 255, .5);
+  background-color: transparent;
+  border-bottom: .25rem solid transparent;
+}
+
+.error404 .nav-masthead .nav-link:hover,
+.error404 .nav-masthead .nav-link:focus {
+  border-bottom-color: rgba(255, 255, 255, .25);
+}
+
+.error404 .nav-masthead .nav-link + .nav-link {
+  margin-left: 1rem;
+}
+
+.error404 .nav-masthead .active {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+@media (min-width: 48em) {
+  .error404 .masthead-brand {
+    float: left;
+  }
+  .error404 .nav-masthead {
+    float: right;
+  }
+}
+
+
+/*
+ * Cover
+ */
+.error404 .cover {
+  padding: 0 1.5rem;
+}
+.error404 .cover .btn-lg {
+  padding: .75rem 1.25rem;
+  font-weight: 700;
+}
+
+
+/*
+ * Footer
+ */
+.error404 .mastfoot {
+  color: rgba(255, 255, 255, .5);
+}

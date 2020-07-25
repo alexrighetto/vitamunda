@@ -1,0 +1,157 @@
+/* Scss Document */
+.woocommerce.archive{
+		.woocommerce-breadcrumb, .woocommerce-products-header, .woocommerce-result-count, .woocommerce-ordering{
+			display:none;
+		}
+		
+	}
+
+
+.woocommerce.archive{
+		
+
+		ul.products{
+		
+			li.product{
+
+				
+				 	.price{
+						font-weight: $font-weight-bold;
+					}
+				
+					.woocommerce-loop-product__title{
+						color:black;
+					}
+
+					.woocommerce-loop-product__title, .price{
+						text-align:center;
+						font-weight: bold;
+					}		
+			}
+
+			.add_to_cart_button, .single_add_to_cart_button{
+
+				font-size: $font-size-sm;
+				background: darken($orange, 10%);
+				color: #fff;
+				border: none;
+				position: relative;
+				font-weight: $font-weight-bold;
+
+				&:hover{
+					background: darken($orange, 15%);
+				}
+			}
+		
+		}	
+		
+	}
+
+
+
+
+.woocommerce.archive .woocommerce-loop-product__title
+.text-muted{
+	display:block;
+}
+
+@media only screen and (max-height: 500px) {
+
+	
+	.woocommerce.archive .woocommerce-loop-product__title
+	.text-muted{
+		display:none;
+	}
+	
+	.woocommerce.archive{
+			
+		
+			ul.products li.product{
+				
+				margin-bottom: $spacer /2 !important;
+				
+				a img{
+					margin:0;
+				}
+				
+			} 
+			
+			
+		
+	}
+}
+		
+	
+
+
+
+
+/* category filter */
+.woof_sid_auto_shortcode {
+	background:lighten($light-gray, 3%);
+	border: none;
+	box-shadow:none;
+	border-radius:2px;
+	
+}
+.chosen-container-single .chosen-single span{
+	font-weight:$font-weight-bold;
+}
+
+.woof_edit_view{
+	display:none;
+}
+
+.woof_submit_search_form_container {
+    overflow: hidden;
+    clear: none;
+   
+}
+
+.woof_products_top_panel ul li a{
+	@extend .badge;
+	@extend .badge-light;
+}
+
+.woof .woof_submit_search_form_container .woof_reset_search_form{
+	@extend .btn ;
+	@extend .btn-sm;
+	@extend .btn-outline-secondary;
+	margin:0;
+}
+
+.woof .woof_redraw_zone{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.woof .chosen-container{
+	margin:0
+}
+.woof_container {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+.woof .woof_submit_search_form_container{
+	margin:0;
+}
+.woof_sid_auto_shortcode .woof_container_inner {
+     padding-left: 0;
+}
+
+
+
+.woof_sid_auto_shortcode .woof_container {
+    float: left;
+    width: 44%;
+    min-width: 150px;
+	margin-right:5px 
+}
+
+
+
+.woocommerce.archive{
+	.wrapper {
+		 padding: 0; 
+	}
+}

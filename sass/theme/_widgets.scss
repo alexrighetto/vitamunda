@@ -1,0 +1,77 @@
+/* Scss Document */
+
+.widget{
+	font-size:0.9em;
+	padding:1em 1em 1em 0;
+	margin-bottom:1em;
+	a{
+		color: #000;
+    	text-decoration: none;
+	}
+	a:hover{
+		text-decoration: underline;
+	}
+	.widget-title{
+		text-transform: uppercase;
+		font-weight: 800;
+		padding: 10px 0;
+		border-bottom: 3px solid #00a2ff;
+		margin-bottom: 20px;
+		width: 90%;
+		font-size: $font-size-base;
+	}
+	ul{
+		margin-bottom: 30px;
+		padding-left:0;
+		margin-left:0;
+		list-style-type:none;
+	}
+	li{
+		line-height: 17px;
+    	margin-bottom: 10px;
+		list-style-type:none;
+	}
+	
+}
+
+
+@media only screen and (max-height: 600px) {
+	.widget{
+		li{
+		line-height: 10px;
+    	margin-bottom: 10px;
+		list-style-type:none;
+		}
+	}
+}
+
+.widget_nav_menu{
+	
+	ul.menu{
+		
+	}
+	ul.sub-menu{
+		padding-left:0;
+		margin-left:0;
+	}
+}
+
+
+.wc-block-product-best-sellers{
+	.wc-block-grid__product-title{
+		color:black;
+	}
+	.wp-block-button a{
+		font-size: $font-size-sm;
+				background: darken($orange, 10%);
+				color: #fff;
+				border: none;
+				position: relative;
+				font-weight: $font-weight-bold;
+				border-radius: 0;
+				&:hover{
+					background: darken($orange, 15%);
+				}
+		
+	}
+}

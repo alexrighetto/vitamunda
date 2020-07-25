@@ -1,0 +1,73 @@
+/* Scss Document */
+
+
+.xoo-wsc-ft-btn:link {
+   
+    color: white;
+    background-color:darken($orange , 10%);
+    font-weight:normal;
+}
+
+ .xoo-wsc-ft-btn:hover {
+   
+	background-color: darken($orange , 20%);
+    color: white;
+}
+
+.xoo-wsc-ft-btn:visited{
+	 color: white;
+}
+ .xoo-wsc-footer a.xoo-wsc-ft-btn {
+    
+	display:none;
+}
+
+ .xoo-wsc-footer a.xoo-wsc-ft-btn.xoo-wsc-cart {
+	display:block;
+}
+
+.xoo-wsc-price{
+	display:none;
+}
+
+ .xoo-wsc-footer  .xoo-wsc-shiptxt{
+	font-size:.5em;
+}
+
+ .xoo-wsc-footer .xoo-wsc-tools-label{
+	font-weight:normal;
+	color: lighten($navbar-dark-active-color, 60%);
+}
+
+
+.xoo-wsc-container input[type='number'].xoo-wsc-qty {
+    font-weight:bold;
+}
+
+.span.xoo-wsc-minus{
+	background:$light-gray;
+	
+}
+.span.xoo-wsc-plus{
+	background:$light-gray;
+	
+}
+
+	.xoo-wsc-qtybox, .xoo-wsc-chng {
+    border-color: darken($light-gray, 40%);
+
+}
+.xoo-wsc-icon-trash, .xoo-wsc-icon-trash:before {
+	color:darken($light-gray, 40%);
+}
+.xoo-wsc-chng {
+	color:darken($light-gray, 40%);
+	background: $light-gray;
+}
+.xoo-wsc-chng:hover{
+	background: darken($light-gray, 5%);
+}
+
+.xoo-wsc-total.xoo-wsc-tool{
+	display:none;
+}

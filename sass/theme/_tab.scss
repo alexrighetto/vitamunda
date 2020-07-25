@@ -1,0 +1,199 @@
+/* Woocommerce Tabs */
+
+.woocommerce-tabs{position:relative;
+}
+
+nav.product-tab{
+	.cart{
+		/* imposto la visibilità a zero. il pulsante cart si deve vedere solo quando è "sticky-stuck" */
+		display:none;
+	}
+					
+	&.fs-sticky-stuck{
+		/* quando il pulsante è "sticky-stuck" lo spondo deve assumere questo colore */
+		background: $gray-200;
+		z-index:1021;
+		
+		.cart{
+			/* quando il il tab è sticky-stuck mostra il pulsante cart */ 
+			display:flex;
+		}
+				
+	}
+					
+	ul.nav-pills{
+		margin-bottom:0;
+		
+		li.nav-item{
+			box-sizing: border-box;  
+			display: inline-block;
+			padding-left:0;
+			a.nav-link{
+			
+				font-weight: $font-weight-bold;
+				text-decoration: none;
+				border-radius: 0;
+			}
+			
+			a.nav-link.active{
+				color: $light-blue;
+				border-bottom: 3px $light-blue solid;		
+				background:none !important;
+				border-radius: 0;
+			}
+		}
+	}
+}//-product-tab
+
+
+@include media-breakpoint-down(xs) { 
+	nav.product-tab{
+		ul.nav-pills{
+			
+
+			li.nav-item{
+				font-size:0.75rem;
+			}
+	
+		}
+	}
+}
+@include media-breakpoint-down(md) {
+	nav.product-tab ul{
+		
+		-ms-flex-pack: space-between!important;
+    	justify-content: space-between!important;
+		width:auto;
+		
+		.nav-item{
+			
+		}
+	}
+}
+
+@include media-breakpoint-down(sm) {
+	nav.product-tab ul{
+		
+		-ms-flex-pack: center!important;
+    	justify-content: center!important;
+		width:100%;
+		
+	}
+	
+	/* al di sotto di larghi schermi è meglio non mostrare il pulsante acquista
+	*/
+	nav.product-tab.fs-sticky-stuck{
+		.cart{
+			display:none;
+		}	
+	}
+	
+}
+
+@include media-breakpoint-down(lg) { 
+	nav.product-tab .navbar-brand{
+		display:none;
+	}
+}
+
+
+
+/* 
+* stile per le tabelle
+*/
+
+
+
+
+
+.product-tab-wrapper{
+	padding-bottom: $spacer * 2;
+}
+
+.tab-card{
+	padding-top:2rem;
+	padding-bottom:2rem;
+	border-bottom: 1px solid darken($gray-100, 5%);
+}
+
+.tab-card:nth-of-type(1){
+	border-top: 1px solid darken($gray-100, 5%);
+}
+.tab-card{
+	background: $gray-100;
+	
+	.main-col{
+		@extend .col-12;
+		@extend .col-sm-8;	
+	}
+	.side-col{
+		@extend .col-12;
+		@extend .col-sm-4;
+		@extend .d-none;
+		@extend .d-sm-block;
+	}
+}
+
+
+.tab-card:nth-of-type(even){
+	background: $gray-100;
+	
+	.main-col{
+		@extend .order-last;	
+	}
+	.side-col{
+		@extend .order-first;
+	}
+}
+
+
+
+
+.tab-entry-wrapper{
+	background-color: white;
+	-webkit-box-shadow: 10px 10px 92px -60px rgba(0,0,0,1);
+	-moz-box-shadow: 10px 10px 92px -60px rgba(0,0,0,1);
+	box-shadow: 10px 10px 92px -60px rgba(0,0,0,1);
+
+	
+	.tab-entry-header{
+		padding:$spacer ;
+		.tab-entry-title{
+			
+			padding-bottom:$spacer;
+			border-bottom: 2px solid $gray-200;
+			
+			&:before{
+				content: "\f00c"; /* FontAwesome Unicode */
+			  font-family: FontAwesome;
+			  display: inline-block;
+			  
+			  width: 1.3em; /* same as padding-left set on li */
+			color: #77a464;
+			}
+		}
+		
+	}	
+	
+	.tab-entry-content{
+		padding:$spacer *3 ;
+			//background: $white;
+		
+	}
+	
+	.tab-sidebar{
+		.tab-entry-header{
+		
+		.tab-entry-title{
+			font-size:.75rem;
+			text-transform: uppercase;
+			border-bottom: none;
+			color: lighten($title-color, 40%);
+			text-align:center;
+			&:before{
+			content:none;
+			}
+			}
+	}
+}
+}

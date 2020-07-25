@@ -1,0 +1,327 @@
+/* Scss Document */
+
+/* to keep admin bar on it's place */
+
+
+#wrapper-navbar.sticky-top{
+	z-index:1022;
+}
+
+@media screen and (max-width: 600px){
+#wpadminbar {
+    position: fixed !important;
+}
+}
+
+/* handle the admin bar */
+
+
+
+
+
+/* Mobile first */
+
+
+	/* admin bar */
+/*	
+.admin-bar{
+		#wrapper-navbar{
+			&.nav-up  {
+				top: 46px;
+			}
+			&.nav-down  {
+				top: 46px;
+			}	
+		}
+		
+}	
+
+#wrapper-navbar{
+			&.nav-up  {
+				top: 0;
+			}
+			&.nav-down  {
+				top: 0;
+			}	
+		}
+
+/* tablet */
+
+
+
+//@media screen and (min-width: 769px) {
+
+/*
+@include media-breakpoint-up(sm) {	
+	
+	#wrapper-navbar{
+			&.nav-down  {
+				top: 0;
+			}			
+		}
+	
+	#wrapper-navbar{
+			&.nav-up  {
+				top: -31px;
+			}			
+		}
+	
+.admin-bar{
+		#wrapper-navbar{
+			&.nav-down  {
+				top: 31px;
+			}			
+		}
+		
+	}
+.admin-bar{
+		#wrapper-navbar{
+			&.nav-up  {
+				top: 0;
+			}			
+		}
+		
+	}	
+}
+
+@media screen and (min-width: 992px) {
+
+	#wrapper-navbar{
+			&.nav-down  {
+				top: 0;
+			}			
+		}
+	
+	#wrapper-navbar{
+			&.nav-up  {
+				top: -31px;
+			}			
+		}
+
+.admin-bar{
+		#wrapper-navbar{
+			&.nav-down  {
+				top: 31px;
+			}			
+		}
+		
+	}
+.admin-bar{
+		#wrapper-navbar{
+			&.nav-up  {
+				top: 0;
+			}			
+		}
+		
+	}	
+}	
+
+
+@media screen and (min-width: 1200px) {
+
+	#wrapper-navbar{
+			&.nav-down  {
+				top: 0;
+			}			
+		}
+	#wrapper-navbar{
+			&.nav-up  {
+				top: -36px;
+			}			
+		}
+	
+.admin-bar{
+		#wrapper-navbar{
+			&.nav-down  {
+				top: 32px;
+			}			
+		}
+		
+	}
+.admin-bar{
+		#wrapper-navbar{
+			&.nav-up  {
+				top: -3px;
+			}			
+		}
+		
+	}	
+}	
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+	.admin-bar{
+		#wrapper-navbar{
+			&.fixed-top  {
+				top: 46px;
+			}			
+		}
+		
+	}
+}
+@media screen and (min-width: 769px) {
+.admin-bar{
+		#wrapper-navbar{
+			&.nav-down  {
+				top: 32px;
+			}			
+		}
+		
+	}
+.admin-bar{
+		#wrapper-navbar{
+			&.nav-up  {
+				top: 0;
+			}			
+		}
+		
+	}	
+}
+*/
+
+
+.animated {
+    will-change: transform;
+    transition: transform 200ms linear;
+}
+.slideDown {
+    transform: translateY(0%);
+}
+
+.slideUp {
+    transform: translateY(0);
+}
+
+@include media-breakpoint-up(md) { 
+
+.slideUp {
+    transform: translateY(-31px);
+}
+}
+
+
+#wrapper-navbar{
+	
+	transition: all 0.2s ease-in-out;
+	&.nav-up {
+    
+		
+		#main-nav{
+			padding:0;
+			transition: all 0.2s ease-in-out;
+			.nav-link{
+				padding-top:0;
+				padding-bottom:0;
+				font-size: $font-size-sm;
+			}
+		
+			.navbar-brand{
+				padding-top:0;
+				padding-bottom:0;
+				max-width: 150px;
+			}
+		}
+		
+	}
+}
+
+
+/* user nav */
+
+#user-nav{
+	
+	&.navbar{
+		
+		padding: 0;
+		font-size:11px;
+		line-height:15px;
+		font-weight:$font-weight-bold;
+		
+			.nav-link  {
+				font-size:11px;
+				line-height:15px;
+				padding: $nav-link-padding-y $nav-link-padding-y;
+				font-weight:$font-weight-bold;
+				&:hover{
+						color:$gray-600;
+					background: $gray-100;
+					}
+			}
+			.header-widget{
+				
+				a{
+					font-size:11px;
+					line-height:15px;
+					padding: $nav-link-padding-y $nav-link-padding-y;
+					font-weight:$font-weight-bold;
+					color:$gray-800;
+					&:hover{
+						color:$gray-600;
+					}
+				
+				}
+				
+			}
+			
+	}
+	
+}
+	
+
+
+/* main nav */
+
+@media screen and (max-width: 768px) {
+	#main-nav{
+		.widget_axl_product_widget{
+			display:none;
+		} 
+	}
+}
+
+
+
+
+.nav-link {
+            padding-right: $navbar-nav-link-padding-x;
+            padding-left: $navbar-nav-link-padding-x;
+}
+
+
+
+.navbar{
+// PRODUCT BODY
+	&.bg-primary{
+		background-color:white !important;
+		border-bottom: 1px #e3e3e3 solid;
+
+
+	}
+	
+	ul {
+		
+		li{
+			&.current-menu-item{
+				border-bottom: 3px #00a2ff solid;
+    			
+			}	
+			a{
+				
+				color: #333;
+				
+				
+				
+				
+				font-weight: 700;
+				
+				text-decoration: none;
+			}
+		}
+	}	
+	
+}
+	
