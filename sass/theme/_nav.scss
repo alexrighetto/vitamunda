@@ -7,181 +7,6 @@
 	z-index:1022;
 }
 
-@media screen and (max-width: 600px){
-#wpadminbar {
-    position: fixed !important;
-}
-}
-
-/* handle the admin bar */
-
-
-
-
-
-/* Mobile first */
-
-
-	/* admin bar */
-/*	
-.admin-bar{
-		#wrapper-navbar{
-			&.nav-up  {
-				top: 46px;
-			}
-			&.nav-down  {
-				top: 46px;
-			}	
-		}
-		
-}	
-
-#wrapper-navbar{
-			&.nav-up  {
-				top: 0;
-			}
-			&.nav-down  {
-				top: 0;
-			}	
-		}
-
-/* tablet */
-
-
-
-//@media screen and (min-width: 769px) {
-
-/*
-@include media-breakpoint-up(sm) {	
-	
-	#wrapper-navbar{
-			&.nav-down  {
-				top: 0;
-			}			
-		}
-	
-	#wrapper-navbar{
-			&.nav-up  {
-				top: -31px;
-			}			
-		}
-	
-.admin-bar{
-		#wrapper-navbar{
-			&.nav-down  {
-				top: 31px;
-			}			
-		}
-		
-	}
-.admin-bar{
-		#wrapper-navbar{
-			&.nav-up  {
-				top: 0;
-			}			
-		}
-		
-	}	
-}
-
-@media screen and (min-width: 992px) {
-
-	#wrapper-navbar{
-			&.nav-down  {
-				top: 0;
-			}			
-		}
-	
-	#wrapper-navbar{
-			&.nav-up  {
-				top: -31px;
-			}			
-		}
-
-.admin-bar{
-		#wrapper-navbar{
-			&.nav-down  {
-				top: 31px;
-			}			
-		}
-		
-	}
-.admin-bar{
-		#wrapper-navbar{
-			&.nav-up  {
-				top: 0;
-			}			
-		}
-		
-	}	
-}	
-
-
-@media screen and (min-width: 1200px) {
-
-	#wrapper-navbar{
-			&.nav-down  {
-				top: 0;
-			}			
-		}
-	#wrapper-navbar{
-			&.nav-up  {
-				top: -36px;
-			}			
-		}
-	
-.admin-bar{
-		#wrapper-navbar{
-			&.nav-down  {
-				top: 32px;
-			}			
-		}
-		
-	}
-.admin-bar{
-		#wrapper-navbar{
-			&.nav-up  {
-				top: -3px;
-			}			
-		}
-		
-	}	
-}	
-
-
-
-
-
-
-@media screen and (max-width: 768px) {
-	.admin-bar{
-		#wrapper-navbar{
-			&.fixed-top  {
-				top: 46px;
-			}			
-		}
-		
-	}
-}
-@media screen and (min-width: 769px) {
-.admin-bar{
-		#wrapper-navbar{
-			&.nav-down  {
-				top: 32px;
-			}			
-		}
-		
-	}
-.admin-bar{
-		#wrapper-navbar{
-			&.nav-up  {
-				top: 0;
-			}			
-		}
-		
-	}	
-}
-*/
 
 
 .animated {
@@ -203,8 +28,37 @@
 }
 }
 
+.user-nav{
+	@extend .navbar; 
+	@extend	.navbar-expand-md;
+	@extend	.bg-light;
+	@extend	.d-none; 
+	@extend	.d-sm-none;
+	@extend	.d-md-block;
+}
+
+.main-nav{
+	@extend .navbar; 
+	@extend	.navbar-expand-md;
+	@extend .bg-primary; 
+	
+}
+.announcements{
+	@extend .navbar-text;
+	@extend .d-sm-none;
+	@extend .d-md-none;
+	@extend .d-lg-block;
+}
+
+.vitamunda{
+	@extend .navbar-brand;
+	@extend .mb-0;
+}
+
 
 #wrapper-navbar{
+
+	
 	
 	transition: all 0.2s ease-in-out;
 	&.nav-up {

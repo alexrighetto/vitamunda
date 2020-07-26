@@ -26,22 +26,24 @@ $container = get_theme_mod( 'understrap_container_type' );
 <div class="site" id="page">
 
 	<!-- ******************* The Navbar Area ******************* -->
-	<div id="wrapper-navbar" class="sticky-top">
+	<div id="wrapper-navbar" class="sticky-top" >
 
 		
 		
-		<nav id="user-nav" class="navbar navbar-expand-md bg-light d-none d-sm-none d-md-block" aria-labelledby="main-nav-label">
+		<nav id="user-nav" role="navigation" class="user-nav" aria-labelledby="user-nav-label">
 
-			
+			<h2 id="user-nav-label" class="sr-only">
+				<?php esc_html_e( 'User Navigation', 'understrap' ); ?>
+			</h2>
 
 		<?php if ( 'container' === $container ) : ?>
 			<div class="container">
 		<?php endif; ?>
 			<?php	if (  is_active_sidebar( 'header' ) ) { ?>
 				
-					<div class="navbar-text d-sm-none d-md-none d-lg-block">
+					<div class="announcements">
 						<?php dynamic_sidebar( 'header' ); ?>
-					  </div>
+					 </div>
 				
 			<?php } ?>
 
@@ -64,8 +66,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 			</div><!-- .container -->
 			<?php endif; ?>
 
-	</nav><!-- .site-navigation -->
-		<nav id="main-nav" class="navbar navbar-expand-md bg-primary" aria-labelledby="main-nav-label">
+		</nav><!-- .user-navigation -->
+		
+		<nav id="main-nav" role="navigation" class="main-nav" aria-labelledby="main-nav-label">
 
 			<h2 id="main-nav-label" class="sr-only">
 				<?php esc_html_e( 'Main Navigation', 'understrap' ); ?>
@@ -80,11 +83,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 						<?php if ( is_front_page() && is_home() ) : ?>
 
-							<h1 class="navbar-brand mb-0"><a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a></h1>
+							<h1 class="vitamunda mb-0"><a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a></h1>
 
 						<?php else : ?>
 
-							<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a>
+							<a class="vitamunda" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a>
 
 						<?php endif; ?>
 
