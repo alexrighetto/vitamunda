@@ -3,6 +3,28 @@
 node_modules/
 package-lock.json
 
+node_modules/
+bower_components/
+*.log
+
+build/
+dist/
+
+#manual
+.browserslistrc
+.editorconfig
+.jscsrc
+.jshintignore
+.travis.yml
+.phpcs.xml.dist
+.composer.lock
+
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
+
+
 # Logs
 logs
 *.log
