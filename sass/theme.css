@@ -4,6 +4,12 @@ Error: Can't extend
         on line 55 of /Users/alexrighetto/Sites/vitamunda/wp-content/themes/understrap-master/sass/understrap/understrap.scss
         from line 3 of /Users/alexrighetto/Sites/vitamunda/wp-content/themes/understrap-master/sass/theme.scss
 
+50: @import "theme/help"; 
+51: 
+52: @import "theme/support"; 
+53: 
+54: @import "theme/glossario";
+
 Backtrace:
 /Users/alexrighetto/Sites/vitamunda/wp-content/themes/understrap-master/sass/understrap/understrap.scss:55
 /Users/alexrighetto/Sites/vitamunda/wp-content/themes/understrap-master/sass/theme.scss:3
@@ -55,4 +61,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Can't extend \A        .d-block: can't extend nested selectors\A         on line 55 of /Users/alexrighetto/Sites/vitamunda/wp-content/themes/understrap-master/sass/understrap/understrap.scss\A         from line 3 of /Users/alexrighetto/Sites/vitamunda/wp-content/themes/understrap-master/sass/theme.scss"; }
+  content: "Error: Can't extend \A        .d-block: can't extend nested selectors\A         on line 55 of /Users/alexrighetto/Sites/vitamunda/wp-content/themes/understrap-master/sass/understrap/understrap.scss\A         from line 3 of /Users/alexrighetto/Sites/vitamunda/wp-content/themes/understrap-master/sass/theme.scss\A \A 50: @import \"theme/help\"; \A 51: \A 52: @import \"theme/support\"; \A 53: \A 54: @import \"theme/glossario\";"; }

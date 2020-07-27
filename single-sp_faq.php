@@ -18,7 +18,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		<h2 class="entry-title"><?php echo get_the_title(245 ); ?></h2>
 		<?php if (class_exists('WD_ASP_Globals')){
-				echo do_shortcode('[wpdreams_ajaxsearchpro id=3]'); 
+				echo do_shortcode('[wpdreams_ajaxsearchpro id=1]'); 
 			}
 		?>
 
@@ -36,9 +36,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<?php
 				while ( have_posts() ) {
 					the_post();
-					get_template_part( 'loop-templates/content', 'encyclopedia' );
-					understrap_post_nav();
-
+					get_template_part( 'loop-templates/content', 'faq' );
+					
 					
 				}
 				?>

@@ -152,3 +152,14 @@ a:link.post-edit-link{
 		
 	}
 }
+
+
+/* support for "wp_delete_user_accounts" */
+
+.delete-user-account-container{
+	@extend .jumbotron;
+	
+}
+.delete-my-account{
+	
+}

@@ -1,0 +1,73 @@
+/* Scss Document */
+
+.page.page-template-support{
+	.entry-header{
+		background-color: $light-blue;
+		
+		.entry-title{
+			color:$white;
+		}
+	}
+	
+	.support-nav{
+		background: #f6f7f7;
+    	padding: 60px 0 70px;
+	}
+	.tab-content{
+		border-left:1px solid #dee2e6;
+		border-right:1px solid #dee2e6;
+		border-bottom:1px solid #dee2e6;
+		.tab-pane{
+			background: $white;
+			padding:5rem 1rem 1rem 1rem;
+		}
+	}
+	
+
+	
+	
+}
+
+
+
+
+.single.single-sp_faq{
+	padding:0;
+	.wrapper{
+		background: $gray-200;
+		
+		.main-entry-header{
+			background-color: $light-blue;
+			padding: 105px 0 120px;
+			
+			.entry-title{
+				text-align:center;
+			color:$white;
+				text-transform: uppercase;
+			margin:0 auto;
+		}
+		}
+		
+		#single-wrapper{
+			
+		}
+		
+		#content{
+			margin-top:3rem;
+			background-color: $white;
+			
+			.entry-meta{
+				.byline{display:none;}
+				.posted-on{ display:none;}
+			}
+			.entry-title{
+				padding:1rem;
+			}
+			.entry-content{
+				padding:1rem;
+			}
+		}
+	}
+
+
+}

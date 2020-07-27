@@ -316,7 +316,7 @@ padding:1em 0;
 	
 
 
-.woocommerce .woocommerce-breadcrumb{
+.single .woocommerce-breadcrumb, .woocommerce .woocommerce-breadcrumb{
 	
 	display:none;
 	width: 100%;
@@ -344,7 +344,7 @@ padding:1em 0;
 
 @include media-breakpoint-up(md) {
 
-	.woocommerce .woocommerce-breadcrumb{
+	.single .woocommerce-breadcrumb, .woocommerce .woocommerce-breadcrumb{
 		display:block;
 	}
 }
