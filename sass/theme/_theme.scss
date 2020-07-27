@@ -39,12 +39,13 @@ ul {
   list-style: none;
   padding: 0;
 }
-li {
+
+ul.fancy li {
   padding-left: 1.3em;
 }
 
 
-ul li:before {
+ul.fancy li:before {
   content: "\f00c"; /* FontAwesome Unicode */
   font-family: FontAwesome;
   display: inline-block;
@@ -76,7 +77,7 @@ a[target="_blank"]:after {
 	vertical-align: super;
 }
 
-.yith-wcmap li:before, .nav li:before, .navbar li:before, .woof li:before, .wc-block-grid__products li:before, .yotpo li:before, ul.products > li:before, .menu li:before, .yith-wfbt-items li:before, .xoo-wsc-notification-bar li:before{
+.pagination li:before, .yith-wcmap li:before, .nav li:before, .navbar li:before, .woof li:before, .wc-block-grid__products li:before, .yotpo li:before, ul.products > li:before, .menu li:before, .yith-wfbt-items li:before, .xoo-wsc-notification-bar li:before{
 	content: none; /* FontAwesome Unicode */ 
 	display: auto;
 	margin-left: auto; /* same as padding-left set on li */
@@ -162,4 +163,8 @@ a:link.post-edit-link{
 }
 .delete-my-account{
 	
+}
+
+.pagination li{ 
+	padding-left: 0;
 }

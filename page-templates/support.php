@@ -22,7 +22,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 		<?php if (class_exists('WD_ASP_Globals')){
-				echo do_shortcode('[wpdreams_ajaxsearchpro id=3]'); 
+				echo do_shortcode('[wpdreams_ajaxsearchpro id=1]'); 
 			}
 		?>
 

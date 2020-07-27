@@ -2,17 +2,18 @@
 Error: Can't extend 
        .d-block: can't extend nested selectors
         on line 55 of /Users/alexrighetto/Sites/vitamunda/wp-content/themes/understrap-master/sass/understrap/understrap.scss
-        from line 3 of /Users/alexrighetto/Sites/vitamunda/wp-content/themes/understrap-master/sass/theme.scss
+        from line 4 of /Users/alexrighetto/Sites/vitamunda/wp-content/themes/understrap-master/sass/theme.scss
 
-50: @import "theme/help"; 
-51: 
-52: @import "theme/support"; 
-53: 
-54: @import "theme/glossario";
+50: 
+51: @import "theme/help"; 
+52: 
+53: @import "theme/support"; 
+54: 
+55: @import "theme/glossario";
 
 Backtrace:
 /Users/alexrighetto/Sites/vitamunda/wp-content/themes/understrap-master/sass/understrap/understrap.scss:55
-/Users/alexrighetto/Sites/vitamunda/wp-content/themes/understrap-master/sass/theme.scss:3
+/Users/alexrighetto/Sites/vitamunda/wp-content/themes/understrap-master/sass/theme.scss:4
 /Applications/Adobe Dreamweaver 2020/Adobe Dreamweaver 2020.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/selector/comma_sequence.rb:108:in `block in populate_extends'
 /Applications/Adobe Dreamweaver 2020/Adobe Dreamweaver 2020.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/selector/comma_sequence.rb:106:in `each'
 /Applications/Adobe Dreamweaver 2020/Adobe Dreamweaver 2020.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/selector/comma_sequence.rb:106:in `populate_extends'
@@ -61,4 +62,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Can't extend \A        .d-block: can't extend nested selectors\A         on line 55 of /Users/alexrighetto/Sites/vitamunda/wp-content/themes/understrap-master/sass/understrap/understrap.scss\A         from line 3 of /Users/alexrighetto/Sites/vitamunda/wp-content/themes/understrap-master/sass/theme.scss\A \A 50: @import \"theme/help\"; \A 51: \A 52: @import \"theme/support\"; \A 53: \A 54: @import \"theme/glossario\";"; }
+  content: "Error: Can't extend \A        .d-block: can't extend nested selectors\A         on line 55 of /Users/alexrighetto/Sites/vitamunda/wp-content/themes/understrap-master/sass/understrap/understrap.scss\A         from line 4 of /Users/alexrighetto/Sites/vitamunda/wp-content/themes/understrap-master/sass/theme.scss\A \A 50: \A 51: @import \"theme/help\"; \A 52: \A 53: @import \"theme/support\"; \A 54: \A 55: @import \"theme/glossario\";"; }
