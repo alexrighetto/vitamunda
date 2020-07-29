@@ -3,10 +3,6 @@
 @import "assets/font-awesome";      // <-------- Loads Bootstrap4
 @import "understrap/understrap";  // <-------- Loads the UnderStrap defaults. Just a few classes to incorporate BS in WP
 @import "understrap/woocommerce"; // <-------- Loads WooCommerce style fixes. Comment out if you aren't using WooCommerce
-
-// Optional files - If you dont use the corresponding scripts/fonts comment em out
-@import "assets/font-awesome";    // <-------- Font Awesome Icon font
-
 // Any additional imported files //
 @import "theme/nav"; 
 
@@ -53,3 +49,4 @@
 @import "theme/support"; 
 
 @import "theme/glossario"; 
+

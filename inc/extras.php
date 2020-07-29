@@ -302,6 +302,8 @@ function understrap_axl_wc_varb_price_range( $wcv_price, $product ) {
         sprintf('%s%s', $prefix, $wcv_price);
 }
  
+
+
 add_filter( 'woocommerce_variable_sale_price_html', 'understrap_axl_wc_varb_price_range', 10, 2 );
 add_filter( 'woocommerce_variable_price_html', 'understrap_axl_wc_varb_price_range', 10, 2 );
 
@@ -330,6 +332,11 @@ add_action('woocommerce_single_product_summary', 'woocommerce_template_single_me
  }
  add_filter ( 'woocommerce_account_menu_items', 'my_account_menu_order' );
 
+
+
+
+remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+remove_action( 'wp_print_styles', 'print_emoji_styles' );
 
 
 /*

@@ -25,28 +25,34 @@ $container = get_theme_mod( 'understrap_container_type' );
 <?php do_action( 'wp_body_open' ); ?>
 <div class="site" id="page">
 
+	
+	
 	<!-- ******************* The Navbar Area ******************* -->
 	<div id="wrapper-navbar" class="sticky-top" >
 
 		
 		
-		<nav id="user-nav" role="navigation" class="user-nav" aria-labelledby="user-nav-label">
+		<nav id="user-nav" role="navigation" class="user-nav  bg-light d-none d-sm-none d-md-block" aria-labelledby="user-nav-label">
+			
 
 			<h2 id="user-nav-label" class="sr-only">
 				<?php esc_html_e( 'User Navigation', 'understrap' ); ?>
 			</h2>
-
-		<?php if ( 'container' === $container ) : ?>
+			
+			
+		
 			<div class="container">
-		<?php endif; ?>
+				<div class="row justify-content-md-center">
+		
 			<?php	if (  is_active_sidebar( 'header' ) ) { ?>
 				
-					<div class="announcements">
+					<div class="col d-none d-sm-none d-lg-block">
 						<?php dynamic_sidebar( 'header' ); ?>
-					 </div>
+					</div>
 				
 			<?php } ?>
-
+					
+					<div class="col">
 				<!-- The WordPress Menu goes here -->
 				<?php
 				wp_nav_menu(
@@ -62,13 +68,16 @@ $container = get_theme_mod( 'understrap_container_type' );
 					)
 				);
 				?>
-			<?php if ( 'container' === $container ) : ?>
+						
+			
+					</div>
+				</div>
 			</div><!-- .container -->
-			<?php endif; ?>
+			
 
 		</nav><!-- .user-navigation -->
 		
-		<nav id="main-nav" role="navigation" class="main-nav" aria-labelledby="main-nav-label">
+		<nav id="main-nav" role="navigation" class="navbar-light bg-light navbar main-nav" aria-labelledby="main-nav-label">
 
 			<h2 id="main-nav-label" class="sr-only">
 				<?php esc_html_e( 'Main Navigation', 'understrap' ); ?>
@@ -97,10 +106,23 @@ $container = get_theme_mod( 'understrap_container_type' );
 					}
 					?>
 					<!-- end custom logo -->
-
+				<?php 
+				
+				// activate bootstrap nav toggler only if the plugin is not active
+				
+				$megamenu = "megamenu/megamenu.php";
+				$manu_plugin_active = in_array( $megamenu, (array) get_option( 'active_plugins', array() ) );
+				
+				
+				if ( ! $manu_plugin_active  ){
+			
+				?>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
 					<span class="navbar-toggler-icon"></span>
 				</button>
+				<?php
+				}
+				?>
 
 				<!-- The WordPress Menu goes here -->
 				<?php

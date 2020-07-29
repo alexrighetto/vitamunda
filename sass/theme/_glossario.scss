@@ -11,8 +11,8 @@
 		background: $gray-200;
 		padding:0;
 		.main-entry-header{
-			background-color: $primary;
-			padding: 105px 0 120px;
+			background: $primary !important;
+			
 			
 			.entry-title{
 				text-align:center;
@@ -26,8 +26,10 @@
 			
 		}
 		
-		#content{
-			margin-top:3rem;
+		.site-main{
+			margin-top:2rem;
+			padding-top:0;
+			margin-bottom:2rem;
 			background-color: $white;
 			
 			.entry-meta{
@@ -38,7 +40,7 @@
 				padding:1rem;
 			}
 			.entry-content{
-				padding:1rem;
+				padding:1rem 5rem;
 			}
 		}
 	}

@@ -6,15 +6,13 @@
 	}
 	.entry-header{
 		//background-color: #1ba4fc;
-		background-color: $gray-200;
-		background-image:none;
-		padding: 105px 0 120px;
+		background: $gray-100 !important;
+		
+		
 		.entry-title{
-			text-align:center;
-			//color: $white;
+			
 			color: $gray-500;
-			text-transform: uppercase;
-			margin:0 auto;
+			
 		}
 	}
 	
@@ -25,15 +23,11 @@
 
 .page{
 	.entry-header{
-		background-color: $gray-100;
 		
-		padding: 105px 0 120px;
 		.entry-title{
-			text-align:center;
-			//text-transform: uppercase;
-			margin:0 auto;
+		
 			color: $gray-600;
-			@extend .display-4;
+			
 		}
 	}
 	.entry-content{

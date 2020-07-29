@@ -29,12 +29,7 @@
 }
 
 .user-nav{
-	@extend .navbar; 
-	@extend	.navbar-expand-md;
-	@extend	.bg-light;
-	@extend	.d-none; 
-	@extend	.d-sm-none;
-	@extend	.d-md-block;
+	
 }
 
 .main-nav{
@@ -88,7 +83,7 @@
 
 #user-nav{
 	
-	&.navbar{
+	
 		
 		padding: 0;
 		font-size:11px;
@@ -121,21 +116,10 @@
 				
 			}
 			
-	}
+	
 	
 }
 	
-
-
-/* main nav */
-
-@media screen and (max-width: 768px) {
-	#main-nav{
-		.widget_axl_product_widget{
-			display:none;
-		} 
-	}
-}
 
 
 

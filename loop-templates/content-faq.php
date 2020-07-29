@@ -10,13 +10,13 @@ defined( 'ABSPATH' ) || exit;
 ?>
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-
+<?php echo do_shortcode('[wpdreams_ajaxsearchpro_results id=3 element="div"]'); ?>
 	<header class="entry-header">
 
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
 		
-		<a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Supporto' ) ) ); ?>">Torna alle Domande Frequenti</a>
+	
 
 
 	</header><!-- .entry-header -->
@@ -38,7 +38,7 @@ defined( 'ABSPATH' ) || exit;
 
 	<footer class="entry-footer">
 
-		<?php understrap_entry_footer(); ?>
+		<?php //understrap_entry_footer(); ?>
 
 	</footer><!-- .entry-footer -->
 

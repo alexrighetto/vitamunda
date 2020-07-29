@@ -52,9 +52,10 @@
 }
 
 .aligncenter {
-	@extend .mx-auto,
-	.d-block;
+	@extend .mx-auto;
+	@extend .d-block;
 }
+
 
 .widget_categories,
 .widget_archive {

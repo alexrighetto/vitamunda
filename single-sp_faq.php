@@ -24,13 +24,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 	</header><!-- .entry-header -->
 
-	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
+	<div class="container article-wrapper" id="content" tabindex="-1">
 
-		<div class="row">
-
-			<!-- Do the left sidebar check -->
-			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
-
+		<div class="row entry-content justify-content-md-center">
+		
+			
+<section class="article-col">
 			<main class="site-main" id="main">
 
 				<?php
@@ -43,9 +42,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 				?>
 
 			</main><!-- #main -->
-
-			<!-- Do the right sidebar check -->
-			<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
+</section>
+			
 
 		</div><!-- .row -->
 

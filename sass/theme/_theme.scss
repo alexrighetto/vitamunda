@@ -47,11 +47,12 @@ ul.fancy li {
 
 ul.fancy li:before {
   content: "\f00c"; /* FontAwesome Unicode */
-  font-family: FontAwesome;
+  font-family: "Font Awesome 5 Free";
   display: inline-block;
   margin-left: -1.3em; /* same as padding-left set on li */
   width: 1.3em; /* same as padding-left set on li */
 color: $gray-400;
+	font-weight: 900;
 }
 
 
@@ -71,19 +72,13 @@ img{
 }
 
 a[target="_blank"]:after {
-    font-family: 'FontAwesome';
+    font-family: "Font Awesome 5 Free";
     content: " \f08e";	
 	font-size: .1em;
 	vertical-align: super;
+	font-weight: 900;
 }
 
-.pagination li:before, .yith-wcmap li:before, .nav li:before, .navbar li:before, .woof li:before, .wc-block-grid__products li:before, .yotpo li:before, ul.products > li:before, .menu li:before, .yith-wfbt-items li:before, .xoo-wsc-notification-bar li:before{
-	content: none; /* FontAwesome Unicode */ 
-	display: auto;
-	margin-left: auto; /* same as padding-left set on li */
-	width: auto; /* same as padding-left set on li */
-	color: auto;
-}
 
 
 body{
@@ -168,3 +163,15 @@ a:link.post-edit-link{
 .pagination li{ 
 	padding-left: 0;
 }
+
+
+
+/* fix for woocommerce gutemberg blocks */
+
+
+.wc-block-grid__products {
+    margin: 0;
+    
+}
+
+

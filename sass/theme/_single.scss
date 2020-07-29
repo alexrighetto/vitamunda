@@ -1,2 +1,101 @@
 /* Scss Document */
 
+.full-width {
+ 
+background:$gray-100;
+	img { 
+		
+		    height: 40.75vw;
+    width: 100vw;
+    max-width: none;
+    -o-object-fit: cover;
+    object-fit: cover;
+    margin: 0 auto;
+		
+	  max-width: 100%; 
+		background:$gray-100;
+	}
+
+}
+
+
+
+.page, .single{
+	
+	
+	p {
+  
+  	margin-bottom: $paragraph-margin-bottom *2;
+	}
+	
+	
+	.entry-header{
+		@extend .jumbotron;
+		background:none !important;
+		text-align:center;
+		
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-flow: column nowrap;
+		flex-flow: column nowrap;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		
+		.entry-title{
+			max-width:775px;
+			@extend .display-4;
+		}
+		.entry-meta{
+			color: $gray-400;
+			font-size: $font-size-xm * 1.25;
+			text-transform: uppercase;
+			a{
+				color: $gray-400;
+			}
+			a:link{
+				color: $gray-400;
+			}
+			a:hover{
+				color: $gray-700;
+			}
+			
+			a:visited{
+				color: $gray-400;
+			}
+			.posted-on:before{
+				content: "\f7a2"; /* FontAwesome Unicode */
+				font-family: "Font Awesome 5 Free";
+				display: inline-block;
+				font-weight: 900;
+				margin-left: -1.3em; /* same as padding-left set on li */
+  				width: 1.3em; /* same as padding-left set on li */
+			}
+			.posted-on{
+				margin-left: -1.3em;
+			}
+		}
+		
+		
+	}
+	
+	.article-wrapper{
+	margin-top: 4rem;	
+	}
+	
+	.entry-content{
+			
+		-webkit-box-align: center!important;
+		-ms-flex-align: center!important;
+		align-items: center!important;
+		
+		}
+	
+	.article-col{
+		max-width: 50vw;
+    		width: 100%;
+	}
+}

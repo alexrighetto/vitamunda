@@ -15,9 +15,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 ?>
 
-<div class="wrapper" id="full-width-page-wrapper">
+
 	
-	
+	<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+		
 	<header class="entry-header">
 
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
@@ -29,23 +30,28 @@ $container = get_theme_mod( 'understrap_container_type' );
 	</header><!-- .entry-header -->
 
 	
+<div class="container article-wrapper">
 
-	<div class="support-nav">
-				<div class="<?php echo esc_attr( $container ); ?>" >
-
-		<div class="row">
+		<div class="row entry-content justify-content-md-center">
+			<section class="article-col">
+				
+	
 
 			<?php get_template_part( 'loop-templates/support', 'tab' ); ?>
 			
-		</div><!-- .row end -->
+		
+	</div><!-- .entry-content -->
+	</div>
+</article><!-- #post-## -->
 
-	</div><!-- #content -->
-	</div><!-- #support-nav -->
-						
-	<div class="<?php echo esc_attr( $container ); ?>" >
+		
+		
+	<div class="container article-wrapper">
 
-		<div class="row">
-	<?php
+		<div class="row entry-content justify-content-md-center">
+			<section class="article-col">
+				
+					<?php
 						while ( have_posts() ) {
 							the_post();
 							get_template_part( 'loop-templates/content', 'tab' );
@@ -53,11 +59,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 							
 						}
 						?>
-	</div><!-- .row end -->
 
-	</div><!-- #content -->
-
-</div><!-- #full-width-page-wrapper -->
+			</div><!-- .entry-content -->
+	</div>
+</article><!-- #post-## -->
 
 <?php
 get_footer();

@@ -314,9 +314,17 @@ padding:1em 0;
 	
 // BREADCRUMPS	
 	
+.single .woocommerce-breadcrumb:before{
+	content: "\f015"; /* FontAwesome Unicode */
+  	font-family: "Font Awesome 5 Free";
+  	display: inline-block;
+	font-weight: 900;
 
+}
 
 .single .woocommerce-breadcrumb, .woocommerce .woocommerce-breadcrumb{
+	
+	
 	
 	display:none;
 	width: 100%;

@@ -2,7 +2,7 @@
 
 .page.page-template-support{
 	.entry-header{
-		background-color: $light-blue;
+		background: $light-blue !important;
 		
 		.entry-title{
 			color:$white;
@@ -23,6 +23,9 @@
 		}
 	}
 	
+	.page{
+		background: $gray-200;
+	}
 
 	
 	
@@ -34,11 +37,12 @@
 .single.single-sp_faq{
 	padding:0;
 	.wrapper{
+		padding:0;
 		background: $gray-200;
 		
 		.main-entry-header{
-			background-color: $light-blue;
-			padding: 105px 0 120px;
+			background: $light-blue !important;
+			
 			
 			.entry-title{
 				text-align:center;
@@ -52,8 +56,10 @@
 			
 		}
 		
-		#content{
-			margin-top:3rem;
+		.site-main{
+			margin-top:2rem;
+			padding-top:0;
+			margin-bottom:2rem;
 			background-color: $white;
 			
 			.entry-meta{
@@ -64,7 +70,7 @@
 				padding:1rem;
 			}
 			.entry-content{
-				padding:1rem;
+				padding:1rem 5rem;
 			}
 		}
 	}
