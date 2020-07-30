@@ -6,7 +6,7 @@
 //https://crunchify.com/how-to-stop-loading-woocommerce-js-javascript-and-css-files-on-all-wordpress-postspages/
 
 //* Enqueue scripts and styles
-add_action( 'wp_enqueue_scripts', 'crunchify_disable_woocommerce_loading_css_js' );
+//add_action( 'wp_enqueue_scripts', 'crunchify_disable_woocommerce_loading_css_js' );
  
 function crunchify_disable_woocommerce_loading_css_js() {
  

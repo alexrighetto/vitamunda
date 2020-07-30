@@ -13907,9 +13907,10 @@ figure.woocommerce-product-gallery__wrapper {
   #user-nav .header-widget a {
     font-size: 11px;
     line-height: 15px;
-    padding: 0.5rem 0.5rem;
+    padding: 0.5rem;
     font-weight: 700;
-    color: #343a40; }
+    color: #343a40;
+    display: inline-block; }
     #user-nav .header-widget a:hover {
       color: #6c757d; }
 
@@ -14042,10 +14043,10 @@ ul {
   list-style: none;
   padding: 0; }
 
-ul.fancy li {
+.woocommerce-product-details__short-description ul li, .tab-card ul li, ul.fancy li {
   padding-left: 1.3em; }
 
-ul.fancy li:before {
+.woocommerce-product-details__short-description ul li:before, .tab-card ul li:before, ul.fancy li:before {
   content: "\f00c";
   /* FontAwesome Unicode */
   font-family: FontAwesome;
@@ -14056,14 +14057,6 @@ ul.fancy li:before {
   /* same as padding-left set on li */
   color: #ced4da;
   font-weight: 900; }
-
-li:before .a {
-  display: inline; }
-
-li:before img {
-  content: none;
-  width: auto;
-  margin-left: auto; }
 
 a[target="_blank"]:after {
   font-family: FontAwesome;
@@ -14357,6 +14350,9 @@ product quantity
 /* Woocommerce Tabs */
 .woocommerce-tabs {
   position: relative; }
+
+.woocommerce div.product form.cart {
+  margin-bottom: 0; }
 
 nav.product-tab .cart {
   /* imposto la visibilità a zero. il pulsante cart si deve vedere solo quando è "sticky-stuck" */

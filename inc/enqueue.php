@@ -33,11 +33,6 @@ if ( ! function_exists( 'understrap_scripts' ) ) {
 			wp_enqueue_script( 'comment-reply' );
 		}
 		
-		/* aded by alex july 10 2020 */
-		if( is_active_widget( '', '', 'axl_product_widget' ) ) { // check if search widget is used
-			$js_version = $theme_version . '.' . filemtime( get_template_directory() . '/js/product_image_widget.js' );
-			wp_enqueue_script( 'product-widget', get_template_directory_uri() . '/js/product_image_widget.js', array('jquery'), $js_version, true );
-		}
 		
 		$js_version = $theme_version . '.' . filemtime( get_template_directory() . '/js/site.js' );
 		wp_enqueue_script( 'site', get_template_directory_uri() . '/js/site.js', array('jquery'), $js_version, true );

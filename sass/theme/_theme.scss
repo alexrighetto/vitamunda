@@ -40,12 +40,12 @@ ul {
   padding: 0;
 }
 
-ul.fancy li {
+.woocommerce-product-details__short-description ul li, .tab-card ul li, ul.fancy li {
   padding-left: 1.3em;
 }
 
 
-ul.fancy li:before {
+.woocommerce-product-details__short-description ul li:before, .tab-card ul li:before, ul.fancy li:before {
   content: "\f00c"; /* FontAwesome Unicode */
   font-family: FontAwesome;
   display: inline-block;
@@ -55,21 +55,6 @@ color: $gray-400;
 	font-weight: 900;
 }
 
-
-
-.a {
-  li:before & {
-	  display:inline;
-	}
-}
-
-img{
-	li:before & {
-	  content:none;
-		width:auto;
-		margin-left:auto;
-	}
-}
 
 a[target="_blank"]:after {
     font-family: FontAwesome;

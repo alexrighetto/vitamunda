@@ -105,9 +105,11 @@
 				a{
 					font-size:11px;
 					line-height:15px;
-					padding: $nav-link-padding-y $nav-link-padding-y;
+					padding:  $nav-link-padding-y;
 					font-weight:$font-weight-bold;
 					color:$gray-800;
+					display:inline-block;
+					
 					&:hover{
 						color:$gray-600;
 					}

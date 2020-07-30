@@ -3,6 +3,10 @@
 .woocommerce-tabs{position:relative;
 }
 
+.woocommerce div.product form.cart {
+    margin-bottom: 0; 
+}
+
 nav.product-tab{
 	.cart{
 		/* imposto la visibilità a zero. il pulsante cart si deve vedere solo quando è "sticky-stuck" */
