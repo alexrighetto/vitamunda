@@ -47,7 +47,7 @@ ul.fancy li {
 
 ul.fancy li:before {
   content: "\f00c"; /* FontAwesome Unicode */
-  font-family: "Font Awesome 5 Free";
+  font-family: FontAwesome;
   display: inline-block;
   margin-left: -1.3em; /* same as padding-left set on li */
   width: 1.3em; /* same as padding-left set on li */
@@ -72,7 +72,7 @@ img{
 }
 
 a[target="_blank"]:after {
-    font-family: "Font Awesome 5 Free";
+    font-family: FontAwesome;
     content: " \f08e";	
 	font-size: .1em;
 	vertical-align: super;
