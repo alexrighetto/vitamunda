@@ -21,5 +21,3 @@ if ( class_exists( 'woocommerce' ) ) {
 	
 }
 ?>
-
-<div class="col-md content-area" id="primary">

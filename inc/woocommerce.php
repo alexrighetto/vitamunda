@@ -30,10 +30,18 @@ if ( ! function_exists( 'understrap_woocommerce_support' ) ) {
 remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10 );
 remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10 );
 
+
+
+
+
 // Then hook in your own functions to display the wrappers your theme requires.
-add_action( 'woocommerce_before_main_content', 'understrap_woocommerce_wrapper_start', 10 );
-add_action( 'woocommerce_after_single_product_summary', 'understrap_woocommerce_wrapper_middle', 9 );
-add_action( 'woocommerce_after_main_content', 'understrap_woocommerce_wrapper_end', 10 );
+//add_action( 'woocommerce_before_main_content', 'understrap_woocommerce_wrapper_start', 10 );
+//add_action( 'woocommerce_after_single_product_summary', 'understrap_woocommerce_wrapper_middle_open', 9 );
+//add_action( 'woocommerce_after_main_content', 'understrap_woocommerce_wrapper_end', 10 );
+
+
+
+
 
 	
 if ( ! function_exists( 'understrap_woocommerce_wrapper_start' ) ) {
@@ -42,28 +50,17 @@ if ( ! function_exists( 'understrap_woocommerce_wrapper_start' ) ) {
 	 */
 	function understrap_woocommerce_wrapper_start() {
 		$container = get_theme_mod( 'understrap_container_type' );
+		
 		echo '<div class="wrapper" id="woocommerce-wrapper">';
 			echo '<div class="product-top-wrapper">';
-			echo '<div class="' . esc_attr( $container ) . '" id="content" tabindex="-1">';
+			echo '<div class="' . esc_attr( $container ) . '" tabindex="-1">';
 			echo '<div class="row">';
-			get_template_part( 'global-templates/left-sidebar-check' );
 			echo '<main class="site-main" id="main">';
 	}
 }
 
-function understrap_woocommerce_wrapper_middle() {
-			echo '</main><!-- #main -->';
-			echo '</div><!-- .row -->';
-			echo '</div><!-- Container end -->';
-			echo '</div><!-- .product-top-wrapper -->';
-			echo '</div><!-- .product-top-wrapper -->';
-	
-		
-			echo '<div class="product-bottom-wrapper" >';
-			//echo '<div class="' . esc_attr( $container ) . '"  tabindex="-1">';
-			//echo '<div class="row">';
-	
-}
+
+
 
 
 if ( ! function_exists( 'understrap_woocommerce_wrapper_end' ) ) {
@@ -71,14 +68,41 @@ if ( ! function_exists( 'understrap_woocommerce_wrapper_end' ) ) {
 	 * Display the theme specific end of the page wrapper.
 	 */
 	function understrap_woocommerce_wrapper_end() {
-			echo '</div><!-- .product-bottom-wrapper -->';
-			get_template_part( 'global-templates/right-sidebar-check' );
+			echo '</div><!-- .product-bottom-wrapper end -->';
+			
 			//echo '</div><!-- .row -->';
-			//echo '</div><!-- Container end -->';
+			echo '</div><!-- Container end -->';
 			echo '</div><!-- Wrapper end -->';
 		
 	}
 }
+
+
+
+
+function understrap_woocommerce_wrapper_start_end() {
+	
+			/**
+			* at this stage I should close all understrap_woocommerce_wrapper_start divs
+			*
+			*/
+			echo '</main><!-- #main understrap_woocommerce_wrapper_start close --> ';
+			echo '</div><!-- .row understrap_woocommerce_wrapper_start close -->';
+			echo '</div><!-- Container understrap_woocommerce_wrapper_start end -->';
+			echo '</div><!-- .product-top-wrapper  understrap_woocommerce_wrapper_start -->';
+			
+			/**
+			* open a div to wrap all bottoms
+			*
+			*/
+		
+			echo '<div class="product-bottom-wrapper" >';
+}
+
+function understrap_woocommerce_wrapper_middle_open() {
+	echo '<div class="product-bottom-wrapper" >';
+}
+
 
 if ( ! function_exists( 'understrap_wc_form_field_args' ) ) {
 	/**

@@ -14105,7 +14105,7 @@ a:link.post-edit-link {
   margin: 0; }
 
 /* 
-mantieni questa struttira generica così da garantire
+title product
 */
 .product_title {
   font-size: 2rem;
@@ -14114,6 +14114,9 @@ mantieni questa struttira generica così da garantire
     display: block;
     color: #6c757d !important; }
 
+@media (min-width: 992px) {
+  .product-top-wrapper .product_title {
+    text-align: left !important; } }
 .final-tab {
   padding-top: 1rem;
   padding-bottom: 1rem; }
@@ -14138,9 +14141,6 @@ mantieni questa struttira generica così da garantire
   .blue-back .price {
     font-weight: 700; }
 
-@media (min-width: 576px) {
-  .product-top-wrapper .product_title {
-    text-align: left !important; } }
 /*
 
 AD TO CART BUTTON */
@@ -14221,8 +14221,11 @@ AD TO CART BUTTON */
     line-height: 1.2;
     margin-bottom: 10px; }
 
+/*
+product quantity
+*/
 .woocommerce .quantity .qty {
-  width: 7.631em;
+  width: 4.631em;
   text-align: center;
   height: 55px;
   background: #f8f9fa;
@@ -14300,7 +14303,7 @@ AD TO CART BUTTON */
   width: 100%;
   clear: both;
   margin-bottom: 20px;
-  font-size: 0.5rem;
+  font-size: 0.875rem;
   color: #bfc4c8;
   position: relative;
   left: -9px;
@@ -14319,6 +14322,9 @@ AD TO CART BUTTON */
 @media (min-width: 768px) {
   .single .woocommerce-breadcrumb, .woocommerce .woocommerce-breadcrumb {
     display: block; } }
+@media (min-width: 992px) {
+  .single .woocommerce-breadcrumb, .woocommerce .woocommerce-breadcrumb {
+    font-size: 0.5rem; } }
 .woocommerce.single .wrapper {
   padding: 0; }
 
@@ -14380,7 +14386,7 @@ nav.product-tab ul.nav-pills {
 
 @media (max-width: 575.98px) {
   nav.product-tab ul.nav-pills li.nav-item {
-    font-size: 0.75rem; } }
+    font-size: 0.55rem; } }
 @media (max-width: 991.98px) {
   nav.product-tab ul {
     -ms-flex-pack: space-between !important;

@@ -3,7 +3,7 @@
 
 
 /* 
-mantieni questa struttira generica così da garantire
+title product
 */
 .product_title{
 	font-size:$h2-font-size;
@@ -14,6 +14,21 @@ mantieni questa struttira generica così da garantire
 		color:$gray-600 !important; 
 	}
 }
+
+.woocommerce-product-rating{
+	text-align:center;
+}
+
+@include media-breakpoint-up(lg) {
+		
+	.product-top-wrapper .product_title{
+		text-align:left !important;
+	}
+	.woocommerce-product-rating{
+	text-align:left;
+}
+}
+
 
 
 .final-tab{
@@ -51,12 +66,7 @@ mantieni questa struttira generica così da garantire
 	}
 }
 
-@include media-breakpoint-up(sm) {
-		
-.product-top-wrapper .product_title{
-		text-align:left !important;
-}
-}
+
 
 /*
 
@@ -186,12 +196,14 @@ AD TO CART BUTTON */
 
 
 
-
+/*
+product quantity
+*/
 
 
 
 .woocommerce .quantity .qty {
-    width: 7.631em;
+    width: 4.631em;
     text-align: center;
     height: 55px;
 	background: $gray-100;
@@ -245,7 +257,7 @@ padding:1em 0;
 	text-align:center;
 }
 
-@include media-breakpoint-up(sm) {
+@include media-breakpoint-up(lg) {
 
 	.woocommerce div.product p.price{
 	
@@ -258,6 +270,9 @@ padding:1em 0;
 .product-top-wrapper{
 	background: $gray-100;
 	position:relative;
+	clear:both;
+	overflow:auto; // https://stackoverflow.com/questions/18644367/background-color-not-showing-in-wrapper
+
 }
 
 .product-bottom-wrapper{
@@ -282,28 +297,15 @@ padding:1em 0;
 	background: $gray-200;
 }
 
-.related.products {
-	.products{
-		margin-left:1rem;
-		margin-right:1rem;
-	}
-}
 
-.upsells.products {
-	.products{
-		margin-left:1rem;
-		margin-right:1rem;
-	}
-}
-
-@include media-breakpoint-up(sm){
 	.related.products{
 	.products{
 		margin-left:0;
 		margin-right:0;
 	}
 }
-}
+
+
 .related.products .title_related, .upsells.products .title_upsells{
 		clear:both;
 		text-align:center;
@@ -330,7 +332,7 @@ padding:1em 0;
 	width: 100%;
     clear: both;
     margin-bottom: 20px;
-    font-size: $font-size-xm;
+    font-size: $font-size-sm;
     color: #bfc4c8;
     position: relative;
     left: -9px;
@@ -356,6 +358,15 @@ padding:1em 0;
 		display:block;
 	}
 }
+
+@include media-breakpoint-up(lg) {
+
+	.single .woocommerce-breadcrumb, .woocommerce .woocommerce-breadcrumb{
+
+font-size: $font-size-xm;
+	}
+}
+
 
 .woocommerce.single{
 	.wrapper {

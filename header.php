@@ -32,7 +32,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		
 		
-		<nav id="user-nav" role="navigation" class="user-nav  bg-light d-none d-sm-none d-md-block" aria-labelledby="user-nav-label">
+		<nav id="user-nav" class="user-nav  bg-light d-none d-sm-none d-md-block" aria-labelledby="user-nav-label">
 			
 
 			<h2 id="user-nav-label" class="sr-only">
@@ -77,7 +77,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		</nav><!-- .user-navigation -->
 		
-		<nav id="main-nav" role="navigation" class="navbar-light bg-light navbar main-nav" aria-labelledby="main-nav-label">
+		<nav id="main-nav" class="navbar-light bg-light navbar main-nav" aria-labelledby="main-nav-label">
 
 			<h2 id="main-nav-label" class="sr-only">
 				<?php esc_html_e( 'Main Navigation', 'understrap' ); ?>
