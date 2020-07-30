@@ -14049,7 +14049,7 @@ ul {
 .woocommerce-product-details__short-description ul li:before, .tab-card ul li:before, ul.fancy li:before {
   content: "\f00c";
   /* FontAwesome Unicode */
-  font-family: FontAwesome;
+  font-family: Font Awesome\ 5 Free;
   display: inline-block;
   margin-left: -1.3em;
   /* same as padding-left set on li */
@@ -14059,8 +14059,8 @@ ul {
   font-weight: 900; }
 
 a[target="_blank"]:after {
-  font-family: FontAwesome;
-  content: " \f08e";
+  font-family: Font Awesome\ 5 Free;
+  content: " \f35d";
   font-size: .1em;
   vertical-align: super;
   font-weight: 900; }
@@ -14387,7 +14387,10 @@ nav.product-tab ul.nav-pills {
   nav.product-tab ul {
     -ms-flex-pack: space-between !important;
     justify-content: space-between !important;
-    width: auto; } }
+    width: auto; }
+
+  nav.product-tab.fs-sticky-stuck .cart small {
+    display: none; } }
 @media (max-width: 767.98px) {
   nav.product-tab ul {
     -ms-flex-pack: center !important;
@@ -14434,11 +14437,12 @@ nav.product-tab ul.nav-pills {
       .tab-entry-wrapper .tab-entry-header .tab-entry-title:before {
         content: "\f00c";
         /* FontAwesome Unicode */
-        font-family: FontAwesome;
+        font-family: Font Awesome\ 5 Free;
         display: inline-block;
         width: 1.3em;
         /* same as padding-left set on li */
-        color: #77a464; }
+        color: #77a464;
+        font-weight: 900; }
   .tab-entry-wrapper .tab-entry-content {
     padding: 3rem; }
   .tab-entry-wrapper .tab-sidebar .tab-entry-header .tab-entry-title {

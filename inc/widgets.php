@@ -76,7 +76,7 @@ if ( ! function_exists( 'understrap_widget_classes' ) ) {
 				$widget_classes .= ' col-md-4 col-4';
 			} elseif ( 2 === $widget_count ) {
 				// If two widgets are published.
-				$widget_classes .= ' col-md-6 col-sm-6 col-6';
+				$widget_classes .= 'col-lg-6 col-md-6 col-sm-6 col-6';
 			} elseif ( 1 === $widget_count ) {
 				// If just on widget is active.
 				$widget_classes .= ' col-md-12';

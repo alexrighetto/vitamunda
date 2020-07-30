@@ -69,10 +69,15 @@ nav.product-tab{
     	justify-content: space-between!important;
 		width:auto;
 		
-		.nav-item{
-			
-		}
+		
 	}
+	nav.product-tab.fs-sticky-stuck{
+			.cart{
+				small{
+				display:none;
+				}
+			}	
+		}
 }
 
 @include media-breakpoint-down(sm) {
@@ -169,11 +174,12 @@ nav.product-tab{
 			
 			&:before{
 				content: "\f00c"; /* FontAwesome Unicode */
-			  font-family: FontAwesome;
+			  font-family: Font Awesome\ 5 Free;
 			  display: inline-block;
 			  
 			  width: 1.3em; /* same as padding-left set on li */
 			color: #77a464;
+			font-weight: 900;	
 			}
 		}
 		

@@ -39,9 +39,11 @@ if ( ! empty( $product_tabs ) ) : ?>
 		
 		<nav id="product-tab" class="product-tab navbar navbar-light" data-sticky-container="#product-tab-wrapper">
 		  <div class="container">
+			  
 		  <span class="navbar-brand mb-0 h1">
 			<?php  echo $product->get_image(array( 30, 30 )); ?>
-			  <?php echo $product->get_name(); ?></span>  
+			  <?php echo $product->get_name(); ?>
+			</span>  
 		  <ul class="nav nav-pills">
 					<?php foreach ( $product_tabs as $key => $product_tab ) : ?>
 						<li class="nav-item">
@@ -58,6 +60,8 @@ if ( ! empty( $product_tabs ) ) : ?>
 	  		<form class="cart form-inline" action="?add-to-cart=<?php echo $prod_variations[0] ; ?>">
 			   <button class="btn btn-primary add-to-cart-button" type="submit"><?php echo esc_html( $product->single_add_to_cart_text() ); ?><small> (€<?php echo $product->get_price(); ?>)</small></button>
 			</form>
+			  
+			  
 			</div>
 		</nav>
 		
