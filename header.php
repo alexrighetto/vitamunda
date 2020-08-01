@@ -117,9 +117,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 				if ( ! $manu_plugin_active  ){
 			
 				?>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
+				<!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
 					<span class="navbar-toggler-icon"></span>
-				</button>
+				</button> -->
 				<?php
 				}
 				?>
@@ -146,3 +146,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 		</nav><!-- .site-navigation -->
 
 	</div><!-- #wrapper-navbar end -->
+	
+	<!-- ******************* The Content Area ******************* -->
+	<div id="main-wrapper-content" >

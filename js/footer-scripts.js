@@ -11,5 +11,7 @@ jQuery(document).ready(function() {
 			 transitionEasing: 'ease',
 			  transitionSpeed: 300
 			}); 
+		}else{
+			console.log("ERRORE: jQuery().accordionfaq non caricato.")
 		}
 });

@@ -1,0 +1,38 @@
+/* Scss Document */
+
+.faq .card-header  {
+	h2{
+		
+		
+		span {
+			width: 30px;
+			height: 30px;
+			background: #fff;
+			border-radius: 100%;
+			color: #a0a5a7;
+
+			font-weight: 700;
+			font-size: 15px;
+			line-height: 30px;
+			left: 0;
+
+			display: inline-block;
+			text-align: center;
+			top: 50%;
+			margin-top: -15px;
+		}
+		
+		button{
+			color:black;
+			font-weight:300;
+			text-transform: uppercase;
+			text-decoration: none;
+		}
+	}
+}
+
+.single-faq{
+	.article-wrapper {
+	margin-top:0;
+	}
+}

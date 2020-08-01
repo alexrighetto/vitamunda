@@ -14,7 +14,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <div class="wrapper" id="single-wrapper">
 	
-	<header class="entry-header main-entry-header">
+	<header class="entry-header main-entry-header bg_supporto">
 
 		<h2 class="entry-title"><?php echo get_the_title(245 ); ?></h2>
 		<?php if (class_exists('WD_ASP_Globals')){
@@ -23,8 +23,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 		?>
 
 	</header><!-- .entry-header -->
-
-	<div class="container article-wrapper" id="content" tabindex="-1">
+<div class="article-wrapper bg_grey">
+	<div class="container " id="content" tabindex="-1">
 
 		<div class="row entry-content justify-content-md-center">
 		
@@ -48,6 +48,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 		</div><!-- .row -->
 
 	</div><!-- #content -->
+	</div>
 
 </div><!-- #single-wrapper -->
 

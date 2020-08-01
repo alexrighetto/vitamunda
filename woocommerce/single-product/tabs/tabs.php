@@ -37,8 +37,8 @@ if ( ! empty( $product_tabs ) ) : ?>
 	<div id="product-tab-wrapper" class="woocommerce-tabs wc-tabs-wrapper">
 		
 		
-		<nav id="product-tab" class="product-tab navbar navbar-light" data-sticky-container="#product-tab-wrapper">
-		  <div class="container">
+		<nav id="product-tab" class="product-tab navbar navbar-light pl-0 pr-0" data-sticky-container="#product-tab-wrapper">
+		  <div class="container pl-0 pr-0">
 			  
 		  <span class="navbar-brand mb-0 h1">
 			<?php  echo $product->get_image(array( 30, 30 )); ?>

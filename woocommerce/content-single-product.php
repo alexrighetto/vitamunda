@@ -19,19 +19,8 @@ defined( 'ABSPATH' ) || exit;
 
 global $product;
 		
-			
-			/**
-			 * Hook: woocommerce_before_single_product.
-			 *
-			 * @hooked woocommerce_output_all_notices - 10
-			 */
-			do_action( 'woocommerce_before_single_product' );
 
-			?>
-		
-		
-		
-		
+	?>
 			
 		<div id="product-<?php the_ID(); ?>" <?php wc_product_class( '', $product ); ?>>
 	
@@ -41,6 +30,15 @@ global $product;
 				<div class="container" tabindex="-1">
 
 					<?php
+					/**
+			 * Hook: woocommerce_before_single_product.
+			 *
+			 * @hooked woocommerce_output_all_notices - 10
+			 */
+			do_action( 'woocommerce_before_single_product' );
+
+		
+					
 						/**
 						 * woocommerce_before_main_content hook.
 						 *

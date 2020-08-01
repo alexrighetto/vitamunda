@@ -85,27 +85,29 @@ AD TO CART BUTTON */
 
 .add-to-cart-btn{
 		
-					text-transform: uppercase;
-					border: none;
-					font-size: $font-size-lg;
-					letter-spacing: 1.5px;
-					
-					
-					margin: 0 auto 20px;
-					display: inline-block;
-					width: 72%;
-					border-radius: 0;
-					padding: 0;
-					line-height: 56px;
-					height: 56px;
-					float: right;
-					position: relative;
-					user-select: none;
-	}
+	text-transform: uppercase;
+	border: none;
+	font-size: 0.8rem;
+	letter-spacing: 0;
+	margin: 0 auto 20px;
+	display: inline-block;
+	width: 72%;
+	border-radius: 0;
+	padding: 0;
+	line-height: 1rem;
+	height: 56px;
+	float: right;
+	position: relative;
+	user-select: none;
+}
+
+
 
 	
 @include media-breakpoint-up(sm) {
 	.add-to-cart-btn{
+		font-size: 1.2rem;
+		line-height: 1.5rem;
 		width: 74%;
 	}
 }
@@ -268,6 +270,7 @@ padding:1em 0;
 
 
 .product-top-wrapper{
+	padding-top:1rem;
 	background: $gray-100;
 	position:relative;
 	clear:both;
@@ -331,7 +334,8 @@ padding:1em 0;
 	display:none;
 	width: 100%;
     clear: both;
-    margin-bottom: 20px;
+    margin-top:1rem;
+	margin-bottom: 1rem;
     font-size: $font-size-sm;
     color: #bfc4c8;
     position: relative;
@@ -412,4 +416,20 @@ font-size: $font-size-xm;
 	.price{
 		text-align:center !important;
 	}
+}
+
+
+.woocommerce-product-details__short-description ul li, .tab-card ul li, ul.fancy li {
+  padding-left: 1.3em;
+}
+
+
+.woocommerce-product-details__short-description ul li:before, .tab-card ul li:before, ul.fancy li:before {
+  content: "\f00c"; /* FontAwesome Unicode */
+  font-family: Font Awesome\ 5 Free;
+  display: inline-block;
+  margin-left: -1.3em; /* same as padding-left set on li */
+  width: 1.3em; /* same as padding-left set on li */
+color: $gray-400;
+	font-weight: 900;
 }

@@ -45,6 +45,8 @@ if ( ! function_exists( 'understrap_scripts' ) ) {
 		$js_version = $theme_version . '.' . filemtime( get_template_directory() . '/js/headroom-trigger.js' );
 		wp_enqueue_script( 'headroom-trigger', get_template_directory_uri() . '/js/headroom-trigger.js', array('jquery', 'headroom' ), $js_version, true );
 		
+		$js_version = $theme_version . '.' . filemtime( get_template_directory() . '/js/footer-scripts.js' );
+		wp_enqueue_script( 'footer-scripts', get_template_directory_uri() . '/js/footer-scripts.js', array('jquery' ), $js_version, true );
 		
 		
 		
@@ -85,5 +87,3 @@ if ( ! function_exists( 'understrap_scripts' ) ) {
 } // End of if function_exists( 'understrap_scripts' ).
 
 add_action( 'wp_enqueue_scripts', 'understrap_scripts' );
-
-

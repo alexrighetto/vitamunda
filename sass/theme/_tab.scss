@@ -56,12 +56,19 @@ nav.product-tab{
 			
 
 			li.nav-item{
-				font-size:0.55rem;
+				font-size:0.75rem;
+				padding-right: .1rem;
+    			padding-left: .1rem;
+				a.nav-link{
+					padding: .125rem .125rem;
+				}
+				
 			}
 	
 		}
 	}
 }
+
 @include media-breakpoint-down(md) {
 	nav.product-tab ul{
 		
