@@ -97,7 +97,7 @@
 }
 
 // Extra small devices (portrait phones, less than 576px)
-.wpcf7-form input[type=email] {
+#wrapper-footer .wpcf7-form input[type=email] {
     background: #404345 url(../img/footer-input-email-icon@x2.png) 16px no-repeat;
     //width: 58.2%;
     height: 47px;
@@ -110,7 +110,7 @@
     border: 1px #404345 solid;
 }
 
-.wpcf7-form input[type=submit] {
+#wrapper-footer .wpcf7-form input[type=submit] {
     background: #00a2ff;
     border: 1px #00a2ff solid;
     text-align: center;
@@ -129,10 +129,10 @@
 
 @media (min-width: 992px) { 
 
-	.wpcf7-form input[type=email] {
+#wrapper-footer	.wpcf7-form input[type=email] {
 	width: 58.2%;
 	}
-	.wpcf7-form input[type=submit] {
+#wrapper-footer	.wpcf7-form input[type=submit] {
 	width: 41.8%;
 	}
 }

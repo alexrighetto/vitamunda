@@ -48,6 +48,7 @@ if ( ! function_exists( 'understrap_setup' ) ) {
 			array(
 				'primary' => __( 'Primary Menu', 'understrap' ),
 				'user' => __( 'User Menu', 'understrap' ),
+				'mobile-footer' => __( 'Mobile Footer', 'understrap' ),
 			)
 		);
 
@@ -156,3 +157,4 @@ if ( ! function_exists( 'understrap_all_excerpts_get_more_link' ) ) {
 		return $post_excerpt;
 	}
 }
+

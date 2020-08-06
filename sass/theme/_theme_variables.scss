@@ -3,13 +3,17 @@
 // Just copy a variable from src/sass/bootstrap4/_variables.scss, paste it here and edit the value.
 
 
-$primary: #fd9b27; // Thats a sample how you could change a BootStrap variable.
+
 $navbar-dark-active-color: #222222;
 $light-gray:#f5f5f5;
-$orange:#fd9b27;
+$orange:#9dcd2e;
 $light-blue:#00a2ff;
 $title-color:#2b3643;
 $body-color:#333333;
+
+$primary: #9dcd2e; // Thats a sample how you could change a BootStrap variable.
+$secondary: $light-blue;
+
 $font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
 
 $font-size-xm:                $font-size-base * .5 !default;

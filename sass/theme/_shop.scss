@@ -1,7 +1,11 @@
 /* Scss Document */
+
+
+
 .woocommerce.archive{
-		.woocommerce-breadcrumb, .woocommerce-products-header, .woocommerce-result-count, .woocommerce-ordering{
+		 .woocommerce-result-count, .woocommerce-ordering{
 			display:none;
+			
 		}
 		
 	}
@@ -48,6 +52,13 @@
 	}
 
 
+.term-description{
+	@extend .container;	
+}
+
+.woocommerce-result-count, .woocommerce-ordering{
+	display:none;
+}
 
 
 .woocommerce.archive .woocommerce-loop-product__title

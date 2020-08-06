@@ -26,18 +26,41 @@ $container = get_theme_mod( 'understrap_container_type' );
 		
 		<div class="<?php echo esc_attr( $container ); ?>">
 			<div class="row">
-				<div class="col-md-6">
+				
+				<div class="col-md-6 d-none d-sm-block">
 					<div class="mailing-list">
 						<?php  dynamic_sidebar( 'footer-left' ); ?>
 					</div><!-- .site-info -->
 				</div><!--col end -->
-				<div class="col-md-6">
+				<div class="col-md-6 d-none d-sm-block">
 					<div class="site-info">
 						<?php  dynamic_sidebar( 'footer-right' ); ?>
 					</div><!-- .site-info -->
 				</div><!--col end -->
+				
+				<div class="col-12 d-block d-sm-none">
+					
+				
+					
+				<?php //	 dynamic_sidebar( 'footer_mobile_three' ); ?>
+				</div><!--col end -->
+				<div class="col-12 d-block d-sm-none bg-dark text-center">
+					<div class="mailing-list">
+				<?php  dynamic_sidebar( 'footer_mobile_two' ); ?>
+					</div>	
+				</div><!--col end -->	
+				<div class="col-12 d-block d-sm-none text-center">
+					<div class="site-info">
+					<?php  dynamic_sidebar( 'footer_mobile_one' ); ?>
+					</div>		
+				</div><!--col end -->
+				
+				
 			</div><!-- row end -->
 		</div><!-- container end -->
+		
+		
+		
 	</footer><!-- #colophon -->	
 
 </div><!-- wrapper end -->

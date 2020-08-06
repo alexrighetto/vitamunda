@@ -46,6 +46,8 @@ global $product;
 						 * @hooked woocommerce_breadcrumb - 20
 						 */
 						do_action( 'woocommerce_before_main_content' );
+						do_action( 'woocommerce_breadcrumb_content' );
+					
 					?>
 	
 					

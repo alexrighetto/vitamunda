@@ -51,4 +51,8 @@ if ( ! function_exists( 'understrap_add_site_info' ) ) {
 }
 
 
+	
+	remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
+	
+	add_action( 'woocommerce_breadcrumb_content', 'woocommerce_breadcrumb', 20, 0 );
 

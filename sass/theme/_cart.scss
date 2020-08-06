@@ -1,10 +1,15 @@
 /* Scss Document */
 
-
 .xoo-wsc-ft-btn:link {
+    color: #fff;
+    background-color: #ef8202;
+    font-weight: 400;
+}
+
+.woocommerce a.button, .woocommerce a.xoo-wsc-ft-btn.button:link, .xoo-wsc-ft-btn:link {
    
     color: white;
-    background-color:darken($orange , 10%);
+    background:darken($orange , 10%);
     font-weight:normal;
 }
 

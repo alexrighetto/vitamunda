@@ -228,6 +228,41 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 				'after_title'   => '</h5>',
 			)
 		);
+		
+		register_sidebar(
+			array(
+				'name'          => __( 'Footer mobile 3', 'understrap' ),
+				'id'            => 'footer_mobile_three',
+				'description'   => __( 'Second widget for under the buy now button', 'understrap' ),
+				'before_widget' => '<div id="%1$s" class="footer-mobile-three">',
+				'after_widget'  => '</div><!-- .header-widget -->',
+				'before_title'  => '<h5 class="widget-title">',
+				'after_title'   => '</h5>',
+			)
+		);
+		
+		register_sidebar(
+			array(
+				'name'          => __( 'Footer mobile 2', 'understrap' ),
+				'id'            => 'footer_mobile_two',
+				'description'   => __( 'Second widget for under the buy now button', 'understrap' ),
+				'before_widget' => '<div id="%1$s" class="footer-mobile-two">',
+				'after_widget'  => '</div><!-- .header-widget -->',
+				'before_title'  => '<h5 class="widget-title">',
+				'after_title'   => '</h5>',
+			)
+		);
+		register_sidebar(
+			array(
+				'name'          => __( 'Footer mobile 1', 'understrap' ),
+				'id'            => 'footer_mobile_one',
+				'description'   => __( 'Second widget for under the buy now button', 'understrap' ),
+				'before_widget' => '<div id="%1$s" class="footer-mobile-one">',
+				'after_widget'  => '</div><!-- .header-widget -->',
+				'before_title'  => '<h5 class="widget-title">',
+				'after_title'   => '</h5>',
+			)
+		);
 
 	}
 } // End of function_exists( 'understrap_widgets_init' ).

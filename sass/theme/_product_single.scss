@@ -32,8 +32,8 @@ title product
 
 
 .final-tab{
-	padding-top:1rem;
-	padding-bottom:1rem;
+	padding-top:5rem;
+	padding-bottom:5rem;
 }
 .blue-back{
 	background:$light-blue url(../img/sfondo-blu.jpg)  no-repeat center center;
@@ -298,6 +298,13 @@ padding:1em 0;
 .related.products{
 	
 	background: $gray-200;
+	
+	.add-to-cart-container a {
+    
+    background: $light-blue;
+    color: #fff;
+ 
+	}
 }
 
 
@@ -319,7 +326,7 @@ padding:1em 0;
 	
 // BREADCRUMPS	
 	
-.single .woocommerce-breadcrumb:before{
+.single .woocommerce-breadcrumb:before, .archive .woocommerce-breadcrumb:before{
 	content: "\f015"; /* FontAwesome Unicode */
   	font-family: "Font Awesome 5 Free";
   	display: inline-block;
