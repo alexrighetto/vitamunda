@@ -17,7 +17,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 <!-- ******************* The Content Area End ******************* -->
 
 </div>
-		
+
+
+
+
+
+
 <div class="" id="wrapper-footer">
 	
 	<?php get_template_part( 'sidebar-templates/sidebar', 'footerfull' ); ?>

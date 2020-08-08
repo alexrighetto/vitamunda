@@ -5,6 +5,12 @@
 /* 
 title product
 */
+
+
+.sidebar__outer, .tab-entry-wrapper{
+	position:relative;
+}
+
 .product_title{
 	font-size:$h2-font-size;
 	text-align:center;
@@ -72,7 +78,7 @@ title product
 
 AD TO CART BUTTON */
 
-.cart .btn, .add-to-cart-btn{
+/*.cart .btn, .add-to-cart-btn{
 	background: $orange;
 	color: $white;
 	cursor: pointer;
@@ -81,7 +87,7 @@ AD TO CART BUTTON */
 		color:$gray-900;
 		background:$gray-500;
 	}
-}
+}*/
 
 .add-to-cart-btn{
 		

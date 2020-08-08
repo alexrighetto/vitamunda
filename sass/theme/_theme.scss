@@ -29,7 +29,7 @@ h5{
 	color: lighten($title-color, 10%);
 }
 
-a, a:link, a:visited{
+a:not(.btn) {
 	color:$light-blue;
 }
 a:hover{
@@ -75,10 +75,7 @@ background-color: rgba(255,229,100,0.3);
 
 
 
-#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item.mega-current-menu-item > a.mega-menu-link, #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item.mega-current-menu-ancestor > a.mega-menu-link, #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item.mega-current-page-ancestor > a.mega-menu-link {
 
-	border-bottom: 3px #00a2ff solid;
-}
 
 
 

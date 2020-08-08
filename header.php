@@ -25,9 +25,14 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <body id="pagebody" <?php body_class(); ?> <?php if (function_exists('understrap_body_attributes')){ understrap_body_attributes(); }?> data-spy="scroll" data-target="#product-tab" data-offset="150">
 <?php do_action( 'wp_body_open' ); ?>
-<div class="site" id="page">
 
 	
+	
+<div class="site" id="page">
+	
+
+	<!-- Modal -->
+<div id="staticBackdrop" class="fade"></div>
 	
 	<!-- ******************* The Navbar Area ******************* -->
 	<div id="wrapper-navbar" class="sticky-top" >
@@ -61,7 +66,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					array(
 						'theme_location'  => 'user',
 						'container_class' => 'collapse navbar-collapse',
-						'container_id'    => 'navbarNavDropdown',
+						'container_id'    => 'userNavDropdown',
 						'menu_class'      => 'navbar-nav ml-auto',
 						'fallback_cb'     => '',
 						'menu_id'         => 'user-menu',
@@ -146,6 +151,45 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<?php endif; ?>
 
 		</nav><!-- .site-navigation -->
+		
+		<nav id="product-nav" class="d-none d-sm-none d-md-block bg-light" aria-labelledby="product-nav-label">
+			<div class="container">
+				<div class="row">
+				<div class='delivery-wrapper d-none d-md-block col-auto'>
+					<?php axl_show_delivery_address (); ?>
+				</div>
+				<div class="product-menu-wrapper col-md-8col-lg-10">
+			<?php 
+				
+				// activate bootstrap nav toggler only if the plugin is not active
+				
+				$megamenu = "megamenu/megamenu.php";
+				$manu_plugin_active = in_array( $megamenu, (array) get_option( 'active_plugins', array() ) );
+				
+				
+			//	if (  $manu_plugin_active  ){
+			
+		
+				wp_nav_menu(
+					array(
+						'theme_location'  => 'product',
+						'container_class' => '',
+						'container_id'    => 'productNavbar',
+						'menu_class'      => 'navbar-nav ml-auto',
+						'fallback_cb'     => '',
+						'menu_id'         => 'product-menu',
+						'depth'           => 2,
+						'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+					)
+				);
+					
+				//	}	
+				?>
+				</div>
+				</div>	
+				</div>	
+		</nav>
+			
 
 	</div><!-- #wrapper-navbar end -->
 	

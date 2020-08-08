@@ -16,18 +16,54 @@
  */
 
 defined( 'ABSPATH' ) || exit;
+?>
+<div class="container mt-3">
+	<div class="row">
+		<div class="col-12">
+			<?php
+			/*
+			 * @hooked wc_empty_cart_message - 10
+			 */
+			do_action( 'woocommerce_cart_is_empty' );
+			?>
+		</div>
+		<div class="col-4">
+			<div class="border-right">
+			<?php  dynamic_sidebar( 'empty-cart-left' ); ?>
+			</div>	
+		</div>
+		
+		
+		<div class="col-8">
+			<div>
+<?php
 
-/*
- * @hooked wc_empty_cart_message - 10
- */
-do_action( 'woocommerce_cart_is_empty' );
+
 
 if ( wc_get_page_id( 'shop' ) > 0 ) :
 	?>
-	<p class="return-to-shop">
-		<a class="btn btn-outline-primary" href="<?php echo esc_url( apply_filters( 'woocommerce_return_to_shop_redirect', wc_get_page_permalink( 'shop' ) ) ); ?>">
+<h3>Il tuo carrello è vuoto</h3>
+<a class=" " href="<?php echo esc_url( apply_filters( 'woocommerce_return_to_shop_redirect', wc_get_page_permalink( 'shop' ) ) ); ?>">
 			<?php esc_html_e( 'Return to shop', 'understrap' ); ?>
+		</a>
+			
+	<p class="return-to-shop mt-3 mb-3">
+		<a class="btn btn-warning btn-gradient xoo-el-login-tgr" href="#">
+			<?php esc_html_e( 'Accedi', 'understrap' ); ?>
+		</a>
+		
+		<a class="btn btn-light btn-gradient   xoo-el-reg-tgr" href="#">
+			<?php esc_html_e( 'Registrati', 'understrap' ); ?>
 		</a>
 	</p>
 	<?php
 endif;
+?></div>
+	</div>
+		</div>
+	</div>
+<div class=" container mt-3">
+				<div class="row">	
+					<?php  dynamic_sidebar( 'empty-cart' ); ?>
+				</div>	
+				</div><!--col end -->

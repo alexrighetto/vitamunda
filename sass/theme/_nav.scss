@@ -3,6 +3,22 @@
 /* to keep admin bar on it's place */
 
 
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link,
+#mega-menu-wrap-product #mega-menu-product > li.mega-menu-item > a.mega-menu-link,
+a.address-front{
+border: 2px solid rgba(255, 255, 255, 0);;	
+}
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link:hover,
+#mega-menu-wrap-product #mega-menu-product > li.mega-menu-item > a.mega-menu-link:hover,
+a.address-front:hover{
+border: 2px solid $gray-300;
+cursor: pointer;	
+}
+
+
+
+
+
 #wrapper-navbar.sticky-top{
 	z-index:1022;
 }
@@ -38,6 +54,12 @@
 	@extend .bg-primary; 
 	
 }
+
+#product-nav{
+	
+	
+}
+
 .announcements{
 	@extend .navbar-text;
 	@extend .d-sm-none;
@@ -164,4 +186,63 @@
 	}	
 	
 }
+
+
+	.backdrop{
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 999;
+		width: 100vw;
+		height: 100vh;
+		background-color: #000;
+		
+	}
+	.backdrop.fade {
+		opacity: 0;
+	}
+	.backdrop.show{
+	opacity: .7;
+	}	
+
+	.fade:not(.show) {
+		opacity: 0;
+	}
+	.fade {
+		transition: opacity .15s linear;
+	}
+
+
+.adress-wrapper{
+		margin-top:1px;
+	;
+		.icon{
+			margin-right:.25rem;
+		}
+	a.address-front{
+		padding:.25rem;
+	}
+	a.address-front, a.address-front:link{
+		color:#3a3a3a;
+	}
+	a.address-front:hover{
+		text-decoration:none;
+	}
+	.text-address{
+		display:block;
+		&.first-row{font-size:.7rem}
+		&.last-row{
+			text-transform: capitalize;
+			font-weight:500;
+			font-size: .9rem;
+    		line-height: 1rem;
+		}
+	}
 	
+	.message-text{
+		margin-left:.25rem;
+	}
+	
+}
+
+

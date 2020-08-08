@@ -263,6 +263,28 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 				'after_title'   => '</h5>',
 			)
 		);
+		register_sidebar(
+			array(
+				'name'          => __( 'Empty Cart bottom ', 'understrap' ),
+				'id'            => 'empty-cart',
+				'description'   => __( 'Empty Cart', 'understrap' ),
+				'before_widget' => '<div id="%1$s" class="empty-cart %2$s">',
+				'after_widget'  => '</div><!-- .header-widget -->',
+				'before_title'  => '<h5 class="widget-title">',
+				'after_title'   => '</h5>',
+			)
+		);
+		register_sidebar(
+			array(
+				'name'          => __( 'Empty Cart left', 'understrap' ),
+				'id'            => 'empty-cart-left',
+				'description'   => __( 'Empty Cart', 'understrap' ),
+				'before_widget' => '<div id="%1$s" class="empty-cart %2$s">',
+				'after_widget'  => '</div><!-- .header-widget -->',
+				'before_title'  => '<h5 class="widget-title">',
+				'after_title'   => '</h5>',
+			)
+		);
 
 	}
 } // End of function_exists( 'understrap_widgets_init' ).

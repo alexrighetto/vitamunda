@@ -28,7 +28,7 @@ global $product;
 	do_action( 'woocommerce_after_add_to_cart_quantity' );
 	?>
 
-	<button type="submit" class="btn btn-primary btn-lg add-to-cart-btn single_add_to_cart_button"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
+	<button type="submit" class="btn btn-primary btn-gradient btn-lg add-to-cart-btn single_add_to_cart_button"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
 
 	<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
 

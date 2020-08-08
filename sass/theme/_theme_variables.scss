@@ -10,9 +10,11 @@ $orange:#9dcd2e;
 $light-blue:#00a2ff;
 $title-color:#2b3643;
 $body-color:#333333;
+$success: #007600;
+//#7da325
 
-$primary: #9dcd2e; // Thats a sample how you could change a BootStrap variable.
-$secondary: $light-blue;
+$primary: $light-blue; // Thats a sample how you could change a BootStrap variable.
+$secondary: #eff1f3;
 
 $font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
 

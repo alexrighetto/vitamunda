@@ -8,6 +8,16 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
+function my_custom_thumbnail_size( $thumbnail ) {
+    $thumbnail = 'medium';
+    return $thumbnail;
+}
+//add_filter( 'woocommerce_cart_item_thumbnail', 'my_custom_thumbnail_size', 10, 3 );
+
+
+
+
+
 add_action( 'after_setup_theme', 'understrap_woocommerce_support' );
 if ( ! function_exists( 'understrap_woocommerce_support' ) ) {
 	/**
@@ -477,13 +487,14 @@ add_action( 'woocommerce_archive_description', 'woocommerce_taxonomy_image', 2 )
 function woocommerce_taxonomy_image() {
 	
 	
-   
+   if(function_exists('get_field')){
 	$image = get_field('immagine_tag');
 	
-if( !empty( $image ) ){ ?>
-    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+		if( !empty( $image ) ){ ?>
+			<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
 
 <?php }
+   }
 	
 
 }
@@ -511,4 +522,54 @@ function woocommerce_category_custom_desc() {
 
 		
 	
+}
+
+
+function axl_show_delivery_address (){
+
+ if ( is_user_logged_in() ) {
+		$current_user = get_current_user_id();
+	 	$pinpoint = "";
+	  	$url = get_permalink( get_option('woocommerce_myaccount_page_id') ). "edit-address/";
+	 	$name = get_user_meta( $current_user, 'first_name', true );  
+	 	$city = get_user_meta( $current_user, 'shipping_city', true ); 
+	 	$postcode = get_user_meta( $current_user, 'shipping_postcode', true );
+		
+	 
+		$format1 = 'Consegna a %s,';
+	 	$format2 = '%s <span>%s</span>';
+
+	 ?>
+	<div class="media adress-wrapper">
+		<a class="address-front d-flex" href="<?php echo $url?>" data-toggle="tooltip" data-placement="left" title="Click qui per modificare o aggiornare il tuo indirizzo di spedizione">
+			<span class="icon align-self-start"><i class="mt-2 far fa-flag fa-lg"></i></span>
+			<span class="d-none d-lg-block media-body message-text">
+				<span class="text-address first-row"><?php echo sprintf($format1,  $name );?> </span>
+				<span class="text-address last-row"> <?php echo sprintf($format2,  $city, $postcode );?></span>
+			</span>	
+		</a>
+	</div>
+	<?php
+		
+	} else {
+	 
+	 	
+	 	$url = get_permalink( get_option('woocommerce_myaccount_page_id') ). "edit-address/";
+	 
+		
+	 
+	 ?>
+	<div class="media adress-wrapper">
+		<a class="address-front d-flex" href="<?php echo $url?>" data-toggle="tooltip" data-placement="left" title="Accedi per aggiungere il tuo indirizzo di spedizione">
+			<span class="icon align-self-start"><i class="mt-2 far fa-flag fa-lg"></i></span>
+			<span class="d-none d-lg-block media-body message-text">
+				<span class="text-address first-row">Consegne </span>
+				<span class="text-address last-row"> In Italia</span>
+			</span>	
+		</a>
+	</div>
+	<?php
+	}
+	
+
 }
