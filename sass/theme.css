@@ -13889,6 +13889,12 @@ a.address-front:hover {
 @media (min-width: 768px) {
   .slideUp {
     transform: translateY(-31px); } }
+.main-nav {
+  padding: .1rem; }
+
+#product-nav {
+  border-bottom: 1px solid #f8f9fa; }
+
 #wrapper-navbar {
   transition: all 0.2s ease-in-out; }
   #wrapper-navbar.nav-up #main-nav {
@@ -14118,6 +14124,74 @@ blockquote {
   margin-left: -30px;
   margin-right: -30px; }
 
+.wp-block-image figcaption {
+  margin-top: .5em;
+  margin-bottom: 1em;
+  font-size: #666666;
+  font-size: 0.875rem;
+  text-transform: capitalize;
+  font-style: italic; }
+
+.wp-block-handpicked-products {
+  background-color: rgba(233, 236, 239, 0.5);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  border-left-color: #ffc107;
+  border-left-width: 9px;
+  border-left-style: solid;
+  padding: 20px 45px 20px 26px;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  margin-left: -30px;
+  margin-right: -30px; }
+
+.grecaptcha-badge {
+  visibility: hidden; }
+
+#ez-toc-container {
+  background-color: rgba(0, 162, 255, 0.5);
+  border-left-color: #00a2ff;
+  border-left-width: 9px;
+  border-left-style: solid;
+  padding: 20px 45px 20px 26px;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  margin-left: -30px;
+  margin-right: -30px; }
+  #ez-toc-container .ez-toc-title {
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase; }
+  #ez-toc-container ul.ez-toc-list li {
+    border-top: 1px solid #0092e6; }
+    #ez-toc-container ul.ez-toc-list li a {
+      color: #212529;
+      display: inline-block;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      padding-left: 2rem; }
+      #ez-toc-container ul.ez-toc-list li a:hover {
+        color: white; }
+    #ez-toc-container ul.ez-toc-list li a:before {
+      content: "\f067";
+      /* FontAwesome Unicode */
+      font-family: "Font Awesome 5 Free";
+      display: inline-block;
+      font-weight: 900;
+      margin-left: -2rem;
+      /* same as padding-left set on li */
+      width: 2rem;
+      /* same as padding-left set on li */ }
+  #ez-toc-container ul.ez-toc-list > li:last-child {
+    border-bottom: 1px solid #0092e6; }
+
+a.vitamunda.navbar-brand, a.vitamunda {
+  text-transform: uppercase;
+  color: #f1881d;
+  letter-spacing: 0.1em; }
+
 .site-main {
   padding-top: 25px; }
 
@@ -14258,6 +14332,49 @@ a:link.post-edit-link {
 .wc-block-grid__products .wc-block-grid__product-image img {
   width: auto;
   max-width: initial; }
+
+.btn-external {
+  background: #e7e9ec;
+  border-radius: 3px;
+  border-color: #ADB1B8 #A2A6AC #8D9096;
+  border-style: solid;
+  border-width: 1px;
+  cursor: pointer;
+  display: inline-block;
+  padding: 0;
+  text-align: center;
+  text-decoration: none !important;
+  vertical-align: middle;
+  background: #f0c14b;
+  border-color: #a88734 #9c7e31 #846a29;
+  color: #111; }
+
+.btn-wrapper {
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.6) inset;
+  background: linear-gradient(to bottom, #f7dfa5, #f0c14b);
+  overflow: hidden; }
+
+.btn-gradient {
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.6) inset; }
+  .btn-gradient.flat {
+    box-shadow: none;
+    border: none; }
+
+.btn-rounded {
+  border-radius: 3px; }
+
+.btn-gradient.btn-warning {
+  border: 1px solid #a07800;
+  background: linear-gradient(to bottom, #ffc721, #edb100); }
+.btn-gradient.btn-light {
+  border: 1px solid #bdc6d0;
+  background: linear-gradient(to bottom, white, #e9ecef); }
+.btn-gradient.btn-secondary, .wpcf7 input.btn-gradient[type=submit] {
+  border: 1px solid #b5bec7;
+  background: linear-gradient(to bottom, #fefefe, #e0e4e8); }
+.btn-gradient.btn-primary {
+  border: 1px solid #006199;
+  background: linear-gradient(to bottom, #1aabff, #0092e6); }
 
 /* 
 title product
@@ -14880,7 +14997,7 @@ nav.product-tab ul.nav-pills {
 
 .woocommerce-cart .entry-title {
   font-size: 1.5rem;
-  margin-bottom: -2rem; }
+  /* margin-bottom: -2rem; */ }
 
 .woocommerce table.shop_table th {
   font-size: 80%;
@@ -14919,46 +15036,6 @@ nav.product-tab ul.nav-pills {
 .empty-cart.widget_text {
   text-align: center; }
 
-.btn-external {
-  background: #e7e9ec;
-  border-radius: 3px;
-  border-color: #ADB1B8 #A2A6AC #8D9096;
-  border-style: solid;
-  border-width: 1px;
-  cursor: pointer;
-  display: inline-block;
-  padding: 0;
-  text-align: center;
-  text-decoration: none !important;
-  vertical-align: middle;
-  background: #f0c14b;
-  border-color: #a88734 #9c7e31 #846a29;
-  color: #111; }
-
-.btn-wrapper {
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.6) inset;
-  background: linear-gradient(to bottom, #f7dfa5, #f0c14b);
-  overflow: hidden; }
-
-.btn-gradient {
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.6) inset; }
-
-.btn-rounded {
-  border-radius: 3px; }
-
-.btn-gradient.btn-warning {
-  border: 1px solid #a07800;
-  background: linear-gradient(to bottom, #ffc721, #edb100); }
-.btn-gradient.btn-light {
-  border: 1px solid #bdc6d0;
-  background: linear-gradient(to bottom, white, #e9ecef); }
-.btn-gradient.btn-secondary, .wpcf7 input.btn-gradient[type=submit] {
-  border: 1px solid #b5bec7;
-  background: linear-gradient(to bottom, #fefefe, #e0e4e8); }
-.btn-gradient.btn-primary {
-  border: 1px solid #006199;
-  background: linear-gradient(to bottom, #1aabff, #0092e6); }
-
 /* Scss Document */
 .widget {
   font-size: 0.9em;
@@ -14996,9 +15073,10 @@ nav.product-tab ul.nav-pills {
   padding-left: 0;
   margin-left: 0; }
 
-.wc-block-product-best-sellers .wc-block-grid__product-title {
+.wc-block-grid__product-title {
   color: black; }
-.wc-block-product-best-sellers .wp-block-button a {
+
+.wp-block-button a {
   font-size: 0.875rem;
   background: #7da325;
   color: #fff;
@@ -15006,7 +15084,7 @@ nav.product-tab ul.nav-pills {
   position: relative;
   font-weight: 700;
   border-radius: 0; }
-  .wc-block-product-best-sellers .wp-block-button a:hover {
+  .wp-block-button a:hover {
     background: #6d8f20; }
 
 /*! formstone v1.4.16-1 [background.css] 2019-08-06 | GPL-3.0 License | formstone.it */

@@ -14,6 +14,18 @@ jQuery(document).ready(function($) {
 	
   	$('[data-toggle="tooltip"]').tooltip()
 
+	// set endpoint and your access key
+	
+	$(window).on("mqchange.mediaquery", function(e, state) {
+		if(state.minWidth < 768 ){
+		   console.log('media query minWidth è inferiore a 768 | ' + state.minWidth, state.maxWidth);
+		   }else{
+			 console.log('media query minWidth è superiore a 768 | ' + state.minWidth, state.maxWidth);   
+		   }
+	  
+	});
+	
+
 });
 
 /**
@@ -56,32 +68,43 @@ jQuery(document).ready(function() {
     var my_selector = 'body.home:not(.logged-in) #user-nav .mega-xoo-el-login-tgr';
     var redirect_link = "<a class=\"btn btn-warning btn-gradient\" href='https://www.vitamunda.it/my-account/'>Accedi</a>";
     var cookie = Cookies.get('popup-login');
+	
 
-    if (cookie != 1) {
+    if (cookie != 5) {
         setTimeout(function() {
 			
-            jQuery(my_selector).popover({
-                placement: 'bottom',
-                trigger: 'focus',
-                container: 'body',
-                html: true,
-                content: redirect_link
-            }).popover('show');
+			jQuery(window).on("mqchange.mediaquery", function(e, state) {
+				if(state.minWidth > 768 ){
+					//mostra solo su desktop
+					jQuery(my_selector).popover({
+						placement: 'bottom',
+						trigger: 'focus',
+						container: 'body',
+						html: true,
+						content: redirect_link
+					}).popover('show');
 
-            Cookies.set('popup-login', '1');
+					Cookies.set('popup-login', '1');
+				   }
+
+			});
+			
+            
 
         }, 5000);
-    } else {
-        console.log("popup login already fired");
-    }
+    } 
 
     jQuery(my_selector).on('shown.bs.popover', function() {
 
         setTimeout(function() {
             jQuery(my_selector).popover('hide');
-        }, 5000);
+        }, 10000);
     })
-
+	jQuery(window).on("mqchange.mediaquery", function(e, state) {
+		if(state.minWidth < 768 ){
+			jQuery(my_selector).popover('hide');
+		}
+	}
     jQuery(window).scroll(function() {
 
         jQuery(my_selector).popover('hide');

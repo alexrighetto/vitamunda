@@ -87,7 +87,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<nav id="main-nav" class="navbar-light bg-light navbar main-nav" aria-labelledby="main-nav-label">
 
 			<h2 id="main-nav-label" class="sr-only">
-				<?php esc_html_e( 'Main Navigation', 'understrap' ); ?>
+				<?php esc_html_e( 'User Navigation', 'understrap' ); ?>
 			</h2>
 
 		<?php if ( 'container' === $container ) : ?>
@@ -108,8 +108,13 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<?php endif; ?>
 
 						<?php
-					} else {
-						the_custom_logo();
+					} else { ?>
+						<a class="vitamunda navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url">
+						<img width ="30" src=" <?php echo get_theme_logo_url(); ?>"  class="d-inline-block align-top" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" loading="lazy" />
+				
+						<?php echo bloginfo( 'name' ); ?>
+						</a>
+				<?php
 					}
 					?>
 					<!-- end custom logo -->
@@ -195,3 +200,4 @@ $container = get_theme_mod( 'understrap_container_type' );
 	
 	<!-- ******************* The Content Area ******************* -->
 	<div id="main-wrapper-content" >
+	<?php do_action( 'global_page_start' ); ?>	

@@ -117,7 +117,7 @@
 
 .woocommerce-cart .entry-title {
     font-size: 1.5rem;
-    margin-bottom: -2rem;
+   /* margin-bottom: -2rem; */
 }
 
 .woocommerce table.shop_table th {
@@ -166,56 +166,3 @@
 .empty-cart.widget_text{
 	text-align:center;
 }
-.btn-external{
-	background: #e7e9ec;
-    border-radius: 3px;
-    border-color: #ADB1B8 #A2A6AC #8D9096;
-    border-style: solid;
-    border-width: 1px;
-    cursor: pointer;
-    display: inline-block;
-    padding: 0;
-    text-align: center;
-    text-decoration: none!important;
-    vertical-align: middle;
-	    
-	background: #f0c14b;
-    border-color: #a88734 #9c7e31 #846a29;
-    color: #111;
-	
-}
-.btn-wrapper{
-	box-shadow: 0 1px 0 rgba(255,255,255,.6) inset;
-	background: linear-gradient(to bottom,#f7dfa5,#f0c14b);
-	overflow:hidden;
-}
-.btn-gradient{
-	box-shadow: 0 1px 0 rgba(255,255,255,.6) inset;
-	
-}
-
-.btn-rounded{
-	border-radius: 3px;
-}
-
-@mixin give-gradient($color){
-	border:1px solid darken($color, 20%);
-	background: linear-gradient(to bottom,lighten($color, 5%),darken($color, 5%));
-}
-
-.btn-gradient{
-	&.btn-warning{
-	
-	@include give-gradient($warning);
-	}
-	&.btn-light{
-	@include give-gradient($light);
-	}
-	&.btn-secondary{
-	@include give-gradient($secondary);
-	}
-	&.btn-primary{
-	@include give-gradient($primary);
-	}
-}
-

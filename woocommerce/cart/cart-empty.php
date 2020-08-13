@@ -49,11 +49,11 @@ if ( wc_get_page_id( 'shop' ) > 0 ) :
 			
 	<p class="return-to-shop mt-3 mb-3">
 		<a class="btn btn-warning btn-gradient xoo-el-login-tgr" href="#">
-			<?php esc_html_e( 'Accedi', 'understrap' ); ?>
+			<?php esc_html_e( 'Log-in', 'understrap' ); ?>
 		</a>
 		
 		<a class="btn btn-light btn-gradient   xoo-el-reg-tgr" href="#">
-			<?php esc_html_e( 'Registrati', 'understrap' ); ?>
+			<?php esc_html_e( 'Register', 'understrap' ); ?>
 		</a>
 	</p>
 	<?php

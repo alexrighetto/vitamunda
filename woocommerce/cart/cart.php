@@ -22,8 +22,8 @@ do_action( 'woocommerce_before_cart' ); ?>
 <div class="container">
 	<div class="row">
 		
-		<div class="col-8">
-			<header class="mt-3"> 
+		<div class="col-12 col-md-7 col-lg-8">
+			<header class="mt-3 mb-3 mb-lg-n4"> 
 			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 			</header>
 			<form class="woocommerce-cart-form" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
@@ -181,7 +181,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 		
 		</div>
 		
-		<div class="col-4">
+		<div class="col-12 col-md-5 col-lg-4">
 			<?php do_action( 'woocommerce_before_cart_collaterals' ); ?>
 
 			<div class="cart-collaterals">

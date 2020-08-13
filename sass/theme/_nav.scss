@@ -52,11 +52,11 @@ cursor: pointer;
 	@extend .navbar; 
 	@extend	.navbar-expand-md;
 	@extend .bg-primary; 
-	
+	padding: .1rem;
 }
 
 #product-nav{
-	
+	border-bottom: 1px solid $gray-100;
 	
 }
 
@@ -218,6 +218,7 @@ cursor: pointer;
 	;
 		.icon{
 			margin-right:.25rem;
+			
 		}
 	a.address-front{
 		padding:.25rem;

@@ -63,6 +63,99 @@ background-color: rgba(255,229,100,0.3);
     margin-right: -30px;
 }
 
+.wp-block-image figcaption {
+    margin-top: .5em;
+    margin-bottom: 1em;
+	font-size: lighten($body-color, 20%);
+	font-size: $font-size-sm;
+	text-transform: capitalize;
+	font-style: italic;
+}
+
+.wp-block-handpicked-products{
+	background-color: rgba( $gray-200, .5 );
+	
+	//background:$light-blue url(../img/sfondo-blu.jpg)  no-repeat center center;
+		-webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+	
+    border-left-color: $warning;
+    border-left-width: 9px;
+    border-left-style: solid;
+    padding: 20px 45px 20px 26px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    margin-left: -30px;
+    margin-right: -30px;
+}
+
+// recaptcha badge removal
+.grecaptcha-badge { visibility: hidden; }
+
+#ez-toc-container{
+	.ez-toc-title{
+		font-weight:$font-weight-bold;
+		color: $white;
+		text-transform: uppercase;
+	}
+background-color: rgba( $light-blue, .5 );
+    border-left-color: $light-blue;
+    border-left-width: 9px;
+    border-left-style: solid;
+    padding: 20px 45px 20px 26px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    margin-left: -30px;
+    margin-right: -30px;
+	
+	ul.ez-toc-list{
+		 li{
+			border-top: 1px solid darken($light-blue, 5%);
+			//border-bottom: 1px solid $gray-900;
+			
+			
+			a{
+				color:$gray-900;
+				display:inline-block;
+				padding-top:1rem;
+				padding-bottom:1rem;
+				padding-left:2rem;
+				
+				&:hover{
+					color:lighten($light-blue, 55%);
+				}
+				
+			}
+			 a:before{
+				content: "\f067"; /* FontAwesome Unicode */
+				font-family: "Font Awesome 5 Free";
+				display: inline-block;
+				font-weight: 900;
+				 margin-left: -2rem; /* same as padding-left set on li */
+  				width: 2rem; /* same as padding-left set on li */
+			 }
+		}
+		
+	}
+	ul.ez-toc-list > li{
+		
+	}
+	ul.ez-toc-list > li:last-child{
+		border-bottom: 1px solid darken($light-blue, 5%);
+	}
+}
+
+
+
+
+a.vitamunda.navbar-brand{
+	text-transform: uppercase;
+	color: #f1881d;
+	letter-spacing: 0.1em;
+}
+
 
 
 .site-main{
@@ -299,3 +392,64 @@ background:$gray-100;
     width: auto;
 	max-width: initial;
 }
+
+
+
+
+.btn-external{
+	background: #e7e9ec;
+    border-radius: 3px;
+    border-color: #ADB1B8 #A2A6AC #8D9096;
+    border-style: solid;
+    border-width: 1px;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0;
+    text-align: center;
+    text-decoration: none!important;
+    vertical-align: middle;
+	    
+	background: #f0c14b;
+    border-color: #a88734 #9c7e31 #846a29;
+    color: #111;
+	
+}
+.btn-wrapper{
+	box-shadow: 0 1px 0 rgba(255,255,255,.6) inset;
+	background: linear-gradient(to bottom,#f7dfa5,#f0c14b);
+	overflow:hidden;
+}
+.btn-gradient{
+	box-shadow: 0 1px 0 rgba(255,255,255,.6) inset;
+	&.flat{
+		box-shadow: none;
+		border:none;
+	}
+}
+
+.btn-rounded{
+	border-radius: 3px;
+}
+
+@mixin give-gradient($color){
+	border:1px solid darken($color, 20%);
+	background: linear-gradient(to bottom,lighten($color, 5%),darken($color, 5%));
+}
+
+.btn-gradient{
+	&.btn-warning{
+	
+	@include give-gradient($warning);
+	}
+	&.btn-light{
+	@include give-gradient($light);
+	}
+	&.btn-secondary{
+	@include give-gradient($secondary);
+	}
+	&.btn-primary{
+	@include give-gradient($primary);
+	}
+}
+
+

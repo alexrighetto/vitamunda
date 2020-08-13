@@ -8,6 +8,10 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
+
+
+
+
 function my_custom_thumbnail_size( $thumbnail ) {
     $thumbnail = 'medium';
     return $thumbnail;
@@ -203,7 +207,7 @@ function axl_woocommerce_tab_end (){
 				}?>
 				
 				<form class="cart" action="?add-to-cart=<?php echo $prod_variations[0] ; ?>">
-					<button class=" btn btn-primary add-to-cart-button" type="submit"><?php echo esc_html( $product->single_add_to_cart_text() ) ." " . $product->get_name(); ?></button>
+					<button class=" btn btn-primary btn-gradient add-to-cart-button" type="submit"><?php echo esc_html( $product->single_add_to_cart_text() ) ." " . $product->get_name(); ?></button>
 				</form>
 			</article>
 			
@@ -218,14 +222,9 @@ add_action( 'woocommerce_product_additional_information', 'axl_woocommerce_add_t
 
 
 function axl_woocommerce_add_to_cart_btn (){
-	global $product;
 	
-	$prod_variations = $product->get_children();
-	?>
-	<form class="cart" action="?add-to-cart=<?php echo $prod_variations[0] ; ?>">
-		<button class="btn btn-primary add-to-cart-button" type="submit"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
-	</form>
-<?php
+	
+	 if(function_exists('product_add_to_cart_link')){ echo product_add_to_cart_link(); }
 }
 
 add_action( 'woocommerce_after_main_content',  'axl_woocommerce_add_reviews');
@@ -322,7 +321,7 @@ add_action('woocommerce_single_product_summary', 'woocommerce_template_single_me
  	);
  	return $menuOrder;
  }
- add_filter ( 'woocommerce_account_menu_items', 'my_account_menu_order' );
+ //add_filter ( 'woocommerce_account_menu_items', 'my_account_menu_order' );
 
 
 
@@ -448,13 +447,13 @@ function iconic_find_matching_product_variation( $product, $attributes ) {
 // To change add to cart text on single product page
 add_filter( 'woocommerce_product_single_add_to_cart_text', 'woocommerce_custom_single_add_to_cart_text' ); 
 function woocommerce_custom_single_add_to_cart_text() {
-    return __( 'Acquista', 'woocommerce' ); 
+    return __( 'Buy', 'understrap' ); 
 }
 
 // To change add to cart text on product archives(Collection) page
 add_filter( 'woocommerce_product_add_to_cart_text', 'woocommerce_custom_product_add_to_cart_text' );  
 function woocommerce_custom_product_add_to_cart_text() {
-    return __( 'Acquista', 'woocommerce' );
+    return __( 'Buy', 'understrap' );
 }
 
 
@@ -486,20 +485,40 @@ function woocommerce_category_image() {
 add_action( 'woocommerce_archive_description', 'woocommerce_taxonomy_image', 2 );
 function woocommerce_taxonomy_image() {
 	
+	$taxId = get_queried_object()->term_id;
 	
    if(function_exists('get_field')){
-	$image = get_field('immagine_tag');
+	$image = get_field('immagine_tag', 'product_tag_'. $taxId);
+	$description = get_field('descrizione_tag', 'product_tag_'. $taxId);   
 	
-		if( !empty( $image ) ){ ?>
+		 ?>
+		<figure class="full-width">
 			<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-
-<?php }
+		</figure>
+<?php 
    }
 	
 
 }
 	
+/**
+ * Display category image on category archive
+ */
+add_action( 'woocommerce_archive_description', 'woocommerce_taxonomy_description', 2 );
+function woocommerce_taxonomy_description() {
+	
+	
+   if(function_exists('get_field')){
+	
+	$description = get_field('descrizione_tag', 'product_tag_46');   
+	
+		echo  $description;
+		  
+ 
+   }
+	
 
+}
 
 
 add_action( 'woocommerce_archive_description', 'woocommerce_category_custom_desc', 10 );
@@ -536,12 +555,12 @@ function axl_show_delivery_address (){
 	 	$postcode = get_user_meta( $current_user, 'shipping_postcode', true );
 		
 	 
-		$format1 = 'Consegna a %s,';
-	 	$format2 = '%s <span>%s</span>';
+		$format1 = __( 'Delivery to %s,', 'understrap' );
+	 	$format2 = __( '%s <span>%s</span>', 'understrap' );
 
 	 ?>
 	<div class="media adress-wrapper">
-		<a class="address-front d-flex" href="<?php echo $url?>" data-toggle="tooltip" data-placement="left" title="Click qui per modificare o aggiornare il tuo indirizzo di spedizione">
+		<a class="address-front d-flex" href="<?php echo $url?>" data-toggle="tooltip" data-placement="left" title="<?php __( 'Click here to change or update your shipping address', 'understrap' ); ?>">
 			<span class="icon align-self-start"><i class="mt-2 far fa-flag fa-lg"></i></span>
 			<span class="d-none d-lg-block media-body message-text">
 				<span class="text-address first-row"><?php echo sprintf($format1,  $name );?> </span>
@@ -553,23 +572,123 @@ function axl_show_delivery_address (){
 		
 	} else {
 	 
-	 	
+	/* 	// set IP address and API access key 
+		
+		$access_key = 'e74672770c37a31d67a8fe475cbe087f';
+
+		// Initialize CURL:
+		$ch = curl_init('http://api.ipstack.com/check?access_key='.$access_key.'');
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+		// Store the data:
+		$json = curl_exec($ch);
+		curl_close($ch);
+
+		// Decode JSON response:
+		$api_result = json_decode($json, true);
+
+		// Output the "capital" object inside "location"
+		$IP_detection =  $api_result['country_name'];
+	 */
 	 	$url = get_permalink( get_option('woocommerce_myaccount_page_id') ). "edit-address/";
-	 
+	 	
 		
 	 
 	 ?>
 	<div class="media adress-wrapper">
-		<a class="address-front d-flex" href="<?php echo $url?>" data-toggle="tooltip" data-placement="left" title="Accedi per aggiungere il tuo indirizzo di spedizione">
+		<a class="address-front d-flex" href="<?php echo $url?>" data-toggle="tooltip" data-placement="left" title="<?php __( 'Log in to add your shipping address', 'understrap' ); ?>">
 			<span class="icon align-self-start"><i class="mt-2 far fa-flag fa-lg"></i></span>
 			<span class="d-none d-lg-block media-body message-text">
-				<span class="text-address first-row">Consegne </span>
-				<span class="text-address last-row"> In Italia</span>
+				<span class="text-address first-row"><?php esc_attr_e( 'We deliver', 'understrap' ); ?></span>
+				<span class="text-address last-row"><?php esc_attr_e( 'in Italy', 'understrap' ); ?></span>
 			</span>	
 		</a>
 	</div>
 	<?php
 	}
-	
 
 }
+
+
+function product_add_to_cart_link(){
+	global $product;
+
+	$product_id = $product->get_id();
+	$productType = WC_Product_Factory::get_product_type($product_id);
+	
+	if( $productType == 'simple'){
+		
+	// simple product	
+	?>
+	<form class="cart form-inline" action="?add-to-cart=<?php echo $product_id ; ?>">
+		<button class="btn btn-primary btn-gradient flat add-to-cart-button" type="submit"><?php echo esc_html( $product->single_add_to_cart_text() ); ?><small> (€<?php echo $product->get_price(); ?>)</small></button>
+	</form>
+
+	<?php	
+	}else{
+		
+	$prod_variations = $product->get_children();
+	// variable product
+	?>
+	<form class="cart form-inline" action="?add-to-cart=<?php echo $prod_variations[0] ; ?>">
+		<button class="btn btn-primary btn-gradient flat add-to-cart-button" type="submit"><?php echo esc_html( $product->single_add_to_cart_text() ); ?><small> (€<?php echo $product->get_price(); ?>)</small></button>
+	</form>
+
+	<?php	
+	}
+	
+	
+}
+
+add_action('global_page_start','axl_get_top_content');
+
+function axl_get_top_content(){
+	if(function_exists('get_field')){
+		$featured_posts = get_field('top_theme_part', false, false);	
+		$post   = get_post( $featured_posts );	
+		$blocks = parse_blocks($post->post_content);
+
+		if( $featured_posts ){ ?>
+			<div class="theme_part top_part part-<?php echo $post->ID ?>">
+				<div class="container">
+					<div class="row">
+						<div class="col">
+							<?php foreach ($blocks as $block) {
+								echo render_block($block);
+							} ?>
+						</div>
+					</div>
+			   </div>  
+			 </div>   
+		<?php 
+		}	
+	}
+	
+};
+
+add_action('global_page_end','axl_get_bottom_content');
+
+function axl_get_bottom_content(){
+	if(function_exists('get_field')){
+		$featured_posts = get_field('bottom_theme_part', false, false);	
+		$post   = get_post( $featured_posts );	
+		$blocks = parse_blocks($post->post_content);
+
+		if( $featured_posts ){ ?>
+			<div class="theme_part bottom_part part-<?php echo $post->ID ?>">
+				<div class="container">
+					<div class="row">
+						<div class="col">
+							<?php foreach ($blocks as $block) {
+								echo render_block($block);
+							} ?>
+						</div>
+					</div>
+			   </div>  
+			 </div>   
+		<?php 
+		}
+	}
+};
+
+

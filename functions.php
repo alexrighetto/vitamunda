@@ -27,6 +27,7 @@ $understrap_includes = array(
 	'/deprecated.php',                      // Load deprecated functions.
 	'/optimizations.php',                      // Load deprecated functions.
 	'/custom-post-type.php',                      // Load deprecated functions.
+	'/fix.php',                      // Load deprecated functions.
 );
 
 foreach ( $understrap_includes as $file ) {

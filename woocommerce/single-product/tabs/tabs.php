@@ -57,11 +57,9 @@ if ( ! empty( $product_tabs ) ) : ?>
 
 				</ul>
 			<?php $prod_variations = $product->get_children(); ?>	
-	  		<form class="cart form-inline" action="?add-to-cart=<?php echo $prod_variations[0] ; ?>">
-			   <button class="btn btn-primary add-to-cart-button" type="submit"><?php echo esc_html( $product->single_add_to_cart_text() ); ?><small> (€<?php echo $product->get_price(); ?>)</small></button>
-			</form>
+	  		
 			  
-			  
+			  <?php if(function_exists('product_add_to_cart_link')){ echo product_add_to_cart_link(); }?>
 			</div>
 		</nav>
 		
