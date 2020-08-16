@@ -16,7 +16,12 @@ cursor: pointer;
 }
 
 
-
+#shiftnav-toggle-main .shiftnav-toggle-burger {
+   
+	
+    padding: 23px 20px !important;
+   
+}
 
 
 #wrapper-navbar.sticky-top{
@@ -52,7 +57,7 @@ cursor: pointer;
 	@extend .navbar; 
 	@extend	.navbar-expand-md;
 	@extend .bg-primary; 
-	padding: .1rem;
+	//padding: .1rem;
 }
 
 #product-nav{

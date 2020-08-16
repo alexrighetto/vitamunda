@@ -690,5 +690,3 @@ function axl_get_bottom_content(){
 		}
 	}
 };
-
-

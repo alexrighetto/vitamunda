@@ -108,6 +108,14 @@ function understrap_load_formstone() {
 	
 	$css_version = $theme_version . '.' . filemtime( get_template_directory() . '/css/number.css' );
 	wp_enqueue_style( 'formstone-number-style', get_template_directory_uri() . '/css/number.css', array(), $css_version );
+	
+	/** Checkbox **/
+	
+	$js_version = $theme_version . '.' . filemtime( get_template_directory() . '/js/checkbox.js' );
+	wp_enqueue_script( 'formstone-checkbox', get_template_directory_uri() . '/js/checkbox.js', array('formstone-core' ), $js_version, true );
+	
+	$css_version = $theme_version . '.' . filemtime( get_template_directory() . '/css/checkbox.css' );
+	wp_enqueue_style( 'formstone-checkbox-style', get_template_directory_uri() . '/css/checkbox.css', array(), $css_version );
 }
 
 add_action( 'wp_enqueue_scripts', 'understrap_load_formstone' );

@@ -13873,6 +13873,9 @@ a.address-front:hover {
   border: 2px solid #dee2e6;
   cursor: pointer; }
 
+#shiftnav-toggle-main .shiftnav-toggle-burger {
+  padding: 23px 20px !important; }
+
 #wrapper-navbar.sticky-top {
   z-index: 1022; }
 
@@ -13889,9 +13892,6 @@ a.address-front:hover {
 @media (min-width: 768px) {
   .slideUp {
     transform: translateY(-31px); } }
-.main-nav {
-  padding: .1rem; }
-
 #product-nav {
   border-bottom: 1px solid #f8f9fa; }
 

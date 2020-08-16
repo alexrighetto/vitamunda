@@ -14,16 +14,7 @@ jQuery(document).ready(function($) {
 	
   	$('[data-toggle="tooltip"]').tooltip()
 
-	// set endpoint and your access key
 	
-	$(window).on("mqchange.mediaquery", function(e, state) {
-		if(state.minWidth < 768 ){
-		   console.log('media query minWidth è inferiore a 768 | ' + state.minWidth, state.maxWidth);
-		   }else{
-			 console.log('media query minWidth è superiore a 768 | ' + state.minWidth, state.maxWidth);   
-		   }
-	  
-	});
 	
 
 });
@@ -36,7 +27,7 @@ jQuery(document).ready(function($) {
  */
 
 jQuery(document).ready(function() {
-	console.log('Backdrop for the menu');	
+	//console.log('Backdrop for the menu');	
 	jQuery(function($) {
 		$('li.mega-menu-item').on('open_panel', function() {
 			//console.log('Sub menu opened');
@@ -54,7 +45,7 @@ jQuery(document).ready(function() {
 
 
 /**
- *  Backdrop for the menu.
+ * Log-in popup.
  *
  * @require: Jquery, bootstrap, cockie.js
  * @works: in home page only
@@ -104,7 +95,7 @@ jQuery(document).ready(function() {
 		if(state.minWidth < 768 ){
 			jQuery(my_selector).popover('hide');
 		}
-	}
+	});
     jQuery(window).scroll(function() {
 
         jQuery(my_selector).popover('hide');
@@ -129,7 +120,7 @@ jQuery(document).ready(function($) {
 	
 	console.log('headroom');
 	
-	$("#product-nav").headroom();
+	
 	
 	
 	$("#wrapper-navbar").headroom({
@@ -172,7 +163,7 @@ jQuery(document).ready(function($) {
 
 
 jQuery(document).ready(function($) {	
-	console.log('scroll');
+	//console.log('scroll');
 	// Select all links with hashes
 $('a[href*="#"]')
   // Remove links that don't actually link to anything
@@ -227,7 +218,7 @@ jQuery(document).ready(function($) {
 
 	$( window ).resize(function() {
 
-		productTarget.each(function(){
+	productTarget.each(function(){
 	   if ($(this).height() > maxHeight) { maxHeight = $(this).height(); }
 	});
 

@@ -85,3 +85,14 @@ $('#woof_html_buffer').waitUntilExists(function(){
 	
 });
 	
+
+
+jQuery( document ).ready(function($) {
+	var $radioButtons = $('.attribute-selector');
+	$( ".variations_form" ).on( "show_variation", function ( event, variation ) {
+		console.log('click');
+		$radioButtons.each(function() {
+			$(this).parent().toggleClass('active', this.checked);
+		});
+	});
+});	
